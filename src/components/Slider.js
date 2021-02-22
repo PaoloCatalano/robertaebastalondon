@@ -88,7 +88,7 @@ const Slider = ({ data, alt, sold }) => {
               className="dot"
               key={btnIndex}
               // style={index === btnIndex ? active : undefined}
-              // onClick={() => setIndex(btnIndex)}
+              // onClick={() => setIndex(btnIndex) }
             ></span>
           )
         })}
