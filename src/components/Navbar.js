@@ -3,8 +3,10 @@ import Categories from "../components/Categories"
 import { GatsbyContext } from "../context/context"
 import { Link } from "gatsby"
 import { MdClose } from "react-icons/md"
+import { IoIosArrowBack } from "react-icons/io"
+import { IoIosArrowForward } from "react-icons/io"
 
-const NavbarModal = ({ subcategory, page }) => {
+const NavbarModal = ({ children }) => {
   const { links, hideSidebar } = useContext(GatsbyContext)
 
   const [isSwitched, setIsSwitched] = useState(true)
@@ -39,18 +41,18 @@ const NavbarModal = ({ subcategory, page }) => {
             )
           })}
         </ul>
-        <button className="modal-switch to-R" onClick={toR}>
-          {">"}
+        <button className="no-show modal-switch to-R" onClick={toR}>
+          <IoIosArrowForward />
         </button>
-      </div>
-      <div
-        className={`modal-links modal-top ${isSwitched ? "" : "modal-hidden"}`}
-      >
-        <button className="modal-switch to-L" onClick={toL}>
-          {"<"}
-        </button>
-        <div className="modal-categories">
-          {/* <Categories subcategory={subcategory} page={page} /> */}
+        <div
+          className={`no-show modal-top ${isSwitched ? "" : "modal-hidden"}`}
+        >
+          <div className={`modal-links`}>
+            <button className="modal-switch to-L" onClick={toL}>
+              <IoIosArrowBack />
+            </button>
+            <div className="modal-categories">{children}</div>
+          </div>
         </div>
       </div>
     </div>

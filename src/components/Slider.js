@@ -81,6 +81,18 @@ const Slider = ({ data, alt, sold }) => {
           )
         })}
       </div>
+      <div className="dots-container">
+        {photos.map((_, btnIndex) => {
+          return (
+            <span
+              className="dot"
+              key={btnIndex}
+              // style={index === btnIndex ? active : undefined}
+              // onClick={() => setIndex(btnIndex)}
+            ></span>
+          )
+        })}
+      </div>
     </section>
   )
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState, useContext, useEffect } from "react"
 import Sidebar from "../components/Sidebar"
 import Categories from "../components/Categories"
 import GridPics from "../components/GridPics"
@@ -7,11 +7,16 @@ import products from "../assets/products"
 import { Link, graphql } from "gatsby"
 import Logo from "../components/Logo"
 import MenuBtn from "../components/MenuBtn"
+import { GatsbyContext } from "../context/context"
 
 const Collection = ({ data, pagination }) => {
   const page = pagination || "lighting"
   // CMS
   //category filter
+  const { setClicked } = useContext(GatsbyContext)
+  useEffect(() => {
+    setClicked(false)
+  }, [])
 
   const {
     items: { nodes },
@@ -64,6 +69,8 @@ const Collection = ({ data, pagination }) => {
         width={0}
         subcategory={sottocategoria || subcategory}
         page={page}
+        products={nodes}
+        setProducts={setprodotto}
         nofooter
       >
         <div className="collection">
@@ -85,7 +92,10 @@ const Collection = ({ data, pagination }) => {
 
 export const query = graphql`
   {
-    items: allContentfulOggetto(filter: { categoria: { eq: "lighting" } }) {
+    items: allContentfulOggetto(
+      filter: { categoria: { eq: "lighting" } }
+      sort: { fields: ordineDisposizione, order: ASC }
+    ) {
       nodes {
         titolo
         designer
@@ -97,7 +107,7 @@ export const query = graphql`
           }
         }
         slug: indirizzo
-        categoria
+
         sottocategoria
       }
     }

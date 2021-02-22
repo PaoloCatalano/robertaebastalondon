@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react"
 import { GatsbyContext } from "../context/context"
 
 const Subcategory = ({ subcategory, setProducts, products }) => {
-  const { hideSidebar } = useContext(GatsbyContext)
+  const { hideSidebar, clicked, setClicked } = useContext(GatsbyContext)
   const [index, setIndex] = useState(0)
 
   const showFiltered = (type, typeIndex) => {
@@ -15,6 +15,8 @@ const Subcategory = ({ subcategory, setProducts, products }) => {
     )
 
     setProducts(tempProducts)
+    setClicked(true)
+    hideSidebar()
   }
 
   return (
@@ -28,7 +30,7 @@ const Subcategory = ({ subcategory, setProducts, products }) => {
               showFiltered(type, typeIndex)
             }}
             className={`subcategory-btn ${
-              index === typeIndex ? "btn-active" : ""
+              clicked && index === typeIndex ? "btn-active" : ""
             }`}
           >
             {type}

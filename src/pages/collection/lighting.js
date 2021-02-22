@@ -12,10 +12,14 @@ const lighting = ({ data }) => {
 
 export const query = graphql`
   {
-    items: allContentfulOggetto(filter: { categoria: { eq: "lighting" } }) {
+    items: allContentfulOggetto(
+      filter: { categoria: { eq: "lighting" } }
+      sort: { fields: ordineDisposizione, order: ASC }
+    ) {
       nodes {
         titolo
-
+        designer
+        sold
         ordineDisposizione
         fotoAnteprima {
           fluid {
@@ -23,7 +27,6 @@ export const query = graphql`
           }
         }
         slug: indirizzo
-        categoria
         sottocategoria
       }
     }

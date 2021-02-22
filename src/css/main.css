@@ -303,6 +303,7 @@ aside {
   height: 100vh;
   background: var(--azure);
   transform: translateX(0);
+  display: block;
 }
 .modal-container .modal-close {
   position: absolute;
@@ -322,12 +323,15 @@ aside {
 
 .modal-4-links {
   display: flex;
+  flex-direction: column;
+
   justify-content: center;
   width: 99%;
   margin: 0 auto;
 }
 .modal-link {
-  margin: 0 5%;
+  margin: 5%;
+
   font-weight: 600;
   text-align: center;
 }
@@ -339,6 +343,20 @@ aside {
   border: none;
   cursor: pointer;
   transform: translate(-5rem, -10rem);
+}
+.no-show {
+  display: block;
+}
+@media screen and (min-width: 1001px) {
+  .no-show {
+    display: none;
+  }
+  .modal-4-links {
+    flex-direction: row;
+  }
+  .modal-link {
+    margin: 0 5%;
+  }
 }
 /* ========
 HERO
@@ -387,7 +405,7 @@ HERO
 @media screen and (min-width: 1001px) {
   .hero .img {
     width: 460.5px;
-    height: 435.6px;
+    height: 410.6px;
   }
 }
 
@@ -420,6 +438,7 @@ SIDEBAR
   padding-left: 20px;
   background-color: var(--azure);
   z-index: 80;
+  min-width: 223px;
 }
 @media screen and (max-width: 1001px) {
   .sidebar {
@@ -546,6 +565,7 @@ Collection
   border-bottom: solid 0.1px var(--gray-dark);
 }
 .btn-active {
+  transition: none;
   border-bottom: solid 0.1px var(--gray-dark);
 }
 .phantom-column-collection {
@@ -636,6 +656,7 @@ GridPics
 }
 .preview-info div {
   font-size: var(--f-large);
+  text-transform: uppercase;
 }
 
 .grid-pic:hover .preview-info {
@@ -778,6 +799,23 @@ Slider
   background-color: transparent;
   font-size: 3vw;
 }
+.dots-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 97%;
+  z-index: 65;
+  width: 100%;
+}
+.dot {
+  display: block;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background: var(--gray);
+  margin: 0 4px;
+  /* border: 1px solid var(--white); */
+}
 /* ========
 item-template
 ========== */
@@ -848,7 +886,16 @@ item-template
 /* .info-container {
   height: auto !important;
 } */
-
+.sold-info {
+  width: 100%;
+}
+.sold-info p {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: var(--f-large);
+  padding-top: 15%;
+  font-weight: 600;
+}
 @media screen and (max-width: 699px) {
   .switcher {
     display: block;
@@ -951,6 +998,6 @@ item-template
     display: grid;
   }
   .down {
-    display: none;
+    display: none; btn-active
   } */
 }

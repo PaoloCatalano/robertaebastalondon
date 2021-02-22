@@ -11,9 +11,13 @@ const rugs = ({ data }) => {
 
 export const query = graphql`
   {
-    items: allContentfulOggetto(filter: { categoria: { eq: "rugs" } }) {
+    items: allContentfulOggetto(
+      filter: { categoria: { eq: "rugs" } }
+      sort: { fields: ordineDisposizione, order: ASC }
+    ) {
       nodes {
         titolo
+        designer
         sold
         ordineDisposizione
         fotoAnteprima {
@@ -22,7 +26,6 @@ export const query = graphql`
           }
         }
         slug: indirizzo
-        categoria
         sottocategoria
       }
     }

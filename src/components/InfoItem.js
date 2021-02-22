@@ -1,7 +1,7 @@
 import React from "react"
 import ReactMarkdown from "react-markdown"
 import Logo from "../components/Logo"
-const InfoItem = ({ designer, period, titolo, descrizione, slug }) => {
+const InfoItem = ({ designer, period, titolo, descrizione, slug, sold }) => {
   return (
     <div className="item-info">
       <div style={{ zIndex: 90 }}>
@@ -14,6 +14,11 @@ const InfoItem = ({ designer, period, titolo, descrizione, slug }) => {
       <div className="item-desc">
         <p>{titolo}</p>
         <ReactMarkdown source={descrizione} />
+        {sold && (
+          <div className="sold-info">
+            <p>sold</p>
+          </div>
+        )}
       </div>
       <div className="item-enquire">
         <button className="submit">

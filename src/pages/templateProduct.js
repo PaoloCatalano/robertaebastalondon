@@ -3,7 +3,7 @@ import products from "../assets/products"
 
 const templateProduct = () => {
   console.log(products)
-  return <div>templateProduct</div>
+  return <div>cancellami</div>
 }
 
 export default templateProduct

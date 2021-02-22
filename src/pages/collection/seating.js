@@ -2,8 +2,6 @@ import React from "react"
 import Collection from "../collection"
 import { graphql } from "gatsby"
 const seating = ({ data }) => {
-  console.log(data)
-
   return (
     <div>
       <Collection pagination={"seating"} data={data} />
@@ -12,9 +10,13 @@ const seating = ({ data }) => {
 }
 export const query = graphql`
   {
-    items: allContentfulOggetto(filter: { categoria: { eq: "seating" } }) {
+    items: allContentfulOggetto(
+      filter: { categoria: { eq: "seating" } }
+      sort: { fields: ordineDisposizione, order: ASC }
+    ) {
       nodes {
         titolo
+        designer
         sold
         ordineDisposizione
         fotoAnteprima {
@@ -23,7 +25,6 @@ export const query = graphql`
           }
         }
         slug: indirizzo
-        categoria
         sottocategoria
       }
     }
