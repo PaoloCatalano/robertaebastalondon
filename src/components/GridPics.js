@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import Img from "gatsby-image"
 
 const GridPics = ({ products }) => {
+  // console.log("gridPics", products)
+
   return (
     <ul className="grid-pics">
       {products.map((prod, index) => {

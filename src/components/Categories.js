@@ -21,7 +21,6 @@ const Categories = ({
       }
     }
   `)
-
   //uniche categorie
   const tempCategorie = nodes.map(item => {
     return item.categoria.toLocaleLowerCase()

@@ -4,7 +4,15 @@ import Footer from "../components/Footer"
 import Searchbar from "../components/Searchbar"
 import { GatsbyContext } from "../context/context"
 
-const Layout = ({ children, width, subcategory, page, home, nofooter }) => {
+const Layout = ({
+  children,
+  width,
+  subcategory,
+  page,
+  home,
+  nofooter,
+  products,
+}) => {
   const { isSidebarOpen } = useContext(GatsbyContext)
   return (
     <>

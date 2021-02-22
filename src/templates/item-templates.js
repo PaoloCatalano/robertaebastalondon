@@ -54,18 +54,28 @@ const ItemTemplates = ({ data }) => {
   const [showInfo, setShowInfo] = useState(false)
   const info = useRef(null)
   const section = useRef(null)
+  const infoBlock = useRef(null)
 
   const toggleInfo = () => {
     setShowInfo(!showInfo)
   }
+  useEffect(() => {
+    // window.scrollTo(
+    //   0,
+    //   document.body.scrollHeight + section.current.scrollHeight
+    // )
+    console.log(info.current.style)
+  }, [showInfo])
 
   useEffect(() => {
     const linksHeight = section.current.getBoundingClientRect().height
 
     if (showInfo) {
       info.current.style.height = `${linksHeight}px`
+      infoBlock.current.style.transform = "translateY(-90%)"
     } else {
       info.current.style.height = "0px"
+      infoBlock.current.style.transform = "translateY(0)"
     }
   }, [showInfo])
   const handleBack = () => {
@@ -95,7 +105,7 @@ const ItemTemplates = ({ data }) => {
           sold={sold}
         />
       </div>
-      <div className="item-info-mobile">
+      <div className="item-info-mobile" ref={infoBlock}>
         <div ref={info} className="info-container">
           <div ref={section}>
             <InfoItem

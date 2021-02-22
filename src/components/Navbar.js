@@ -50,7 +50,7 @@ const NavbarModal = ({ subcategory, page }) => {
           {"<"}
         </button>
         <div className="modal-categories">
-          <Categories subcategory={subcategory} page={page} />
+          {/* <Categories subcategory={subcategory} page={page} /> */}
         </div>
       </div>
     </div>

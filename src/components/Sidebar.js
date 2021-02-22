@@ -1,7 +1,6 @@
 import React from "react"
 
-const Sidebar = ({ children, products }) => {
-  console.log(products, "rimane il nodes")
+const Sidebar = ({ children }) => {
   return (
     <div className="sidebar">
       <div>{children}</div>

@@ -12,12 +12,12 @@ const Collection = ({ data, pagination }) => {
   const page = pagination || "lighting"
   // CMS
   //category filter
+
   const {
     items: { nodes },
   } = data
 
-  const [items, setItems] = useState(nodes)
-
+  const [prodotto, setprodotto] = useState(nodes)
   //subcategoryfilter
   const listaSottocategoria = nodes.map(item => {
     return item.sottocategoria.toLocaleLowerCase()
@@ -47,7 +47,7 @@ const Collection = ({ data, pagination }) => {
         <Logo />
       </div>
       <MenuBtn />
-      <Sidebar products={nodes}>
+      <Sidebar>
         <div className="collection-title">
           collection
           <div className="underline"></div>
@@ -56,8 +56,8 @@ const Collection = ({ data, pagination }) => {
           categories={categories}
           subcategory={sottocategoria || subcategory}
           page={page}
-          setProducts={setItems}
           products={nodes}
+          setProducts={setprodotto}
         />
       </Sidebar>
       <Layout
@@ -69,7 +69,7 @@ const Collection = ({ data, pagination }) => {
         <div className="collection">
           <div className="phantom-column-collection"></div>
           <div className="pics-container">
-            <GridPics products={items || filteredProducts} />
+            <GridPics products={prodotto || filteredProducts} />
             <div className="banner-collection">
               <p>To see our full collection visit:</p>
               <Link to="https://robertaebasta.com/" alt="robertaebasta.com">

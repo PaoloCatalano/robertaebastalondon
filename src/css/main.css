@@ -545,7 +545,9 @@ Collection
 .subcategory-btn:hover {
   border-bottom: solid 0.1px var(--gray-dark);
 }
-
+.btn-active {
+  border-bottom: solid 0.1px var(--gray-dark);
+}
 .phantom-column-collection {
   width: 23vw;
   min-width: 221px;
@@ -696,7 +698,7 @@ Slider
 }
 .slider-comandi {
   width: 100%;
-  z-index: 90;
+  z-index: 60;
   display: flex;
   place-items: center;
 }
@@ -851,16 +853,22 @@ item-template
   .switcher {
     display: block;
   }
+  .item-pics {
+    height: 95vh;
+  }
   .item-info-wide {
     display: none;
   }
   .item-info-mobile {
     display: flex;
     flex-direction: column;
+    background: var(--white);
+    z-index: 70;
   }
   .single-object {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    height: 100vh;
   }
   .item-info {
     position: sticky;
