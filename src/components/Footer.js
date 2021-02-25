@@ -7,7 +7,6 @@ const Footer = ({ contact, nofooter, home }) => {
     <div></div>
   ) : (
     <div className="footer">
-      {home && <p className="century">20TH CENTURY DESIGN</p>}
       {contact && (
         <div className="footer-contact">
           <a href="mailto:london@robertaebasta.com">london@robertaebasta.com</a>

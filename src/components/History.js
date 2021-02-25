@@ -29,7 +29,7 @@ const History = () => {
         <div className="underline"></div>
       </div>
       <section className="section1">
-        <article>
+        <article className="parag2">
           <p>
             Robertaebasta was established in Milan in 1967 by Roberta
             Tagliavini. A creative and talented woman with a endless love for

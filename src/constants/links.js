@@ -8,7 +8,7 @@ export default [
     label: "collection",
   },
   {
-    url: "/about",
+    url: "/about/our-history",
     label: "about us",
   },
   {

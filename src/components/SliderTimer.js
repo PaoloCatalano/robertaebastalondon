@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import Img from "gatsby-image"
+import { Link } from "gatsby"
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io"
-import { AiOutlineZoomIn } from "react-icons/ai"
 
 const Slider = ({ data, alt }) => {
   const [photos, setPhotos] = useState(data)
@@ -25,6 +25,21 @@ const Slider = ({ data, alt }) => {
       return index
     })
   }
+
+  useEffect(() => {
+    let slider = setInterval(() => {
+      setIndex(oldIndex => {
+        let index = oldIndex + 1
+        if (index > photos.length - 1) {
+          index = 0
+        }
+        return index
+      })
+    }, 7000)
+    return () => {
+      clearInterval(slider)
+    }
+  }, [index, photos])
 
   return (
     <section className="slider">
@@ -54,25 +69,20 @@ const Slider = ({ data, alt }) => {
 
           return (
             <article className={`slide ${position}`} key={photoIndex}>
-              <a
-                className="zoom"
-                target="_blank"
-                rel="noopener noreferrer"
-                href={photo.fluid.src}
+              <Link
+                // className="zoom"
+                to={`/collection/${photo.indirizzo}`}
               >
-                <button className=" submit">
-                  <AiOutlineZoomIn />
-                </button>
-              </a>
-              <Img
-                className="sliding-img"
-                fluid={photo.fluid}
-                alt={alt ? alt : "Robertaebasta London"}
-                backgroundColor="#ffffff"
-                FadeIn={true}
-                durationFadeIn={2000}
-                style={{ height: "100%" }}
-              />
+                <Img
+                  className="img"
+                  fluid={photo.foto.fluid}
+                  alt={alt ? alt : "Robertaebasta London"}
+                  backgroundColor="#bde0d9"
+                  FadeIn={true}
+                  durationFadeIn={2000}
+                  style={{ height: "100%" }}
+                />
+              </Link>
             </article>
           )
         })}

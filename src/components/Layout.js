@@ -7,6 +7,7 @@ import AboutUs from "../components/AboutUs"
 import { GatsbyContext } from "../context/context"
 import Logo from "../components/Logo"
 import MenuBtn from "../components/MenuBtn"
+import Homenavbar from "../components/Homenavbar"
 
 const Layout = ({
   children,
@@ -27,10 +28,6 @@ const Layout = ({
   }, [])
   return (
     <>
-      {home && (
-        <div className="half-background" style={{ width: `${width}px` }}></div>
-      )}
-
       <aside className={`${isSidebarOpen ? "show-modal" : ""}`}>
         <Navbar oneModal={oneModal}>
           {products ? (
@@ -61,7 +58,11 @@ const Layout = ({
             <Searchbar home={home} />
           </div>
         </div>
-        <div>{children}</div>
+
+        <div style={{ display: "grid", placeItems: "center", width: "100vw" }}>
+          {children}
+        </div>
+
         <Footer contact={contact} nofooter={nofooter} home={home} />
       </main>
     </>

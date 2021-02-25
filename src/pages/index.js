@@ -5,48 +5,56 @@ import MenuBtn from "../components/MenuBtn"
 import Logo from "../components/Logo"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import Searchbar from "../components/Searchbar"
+import SliderTimer from "../components/SliderTimer"
+import Footer from "../components/Footer"
+
 export default function Home({
   data: {
-    file: {
-      childImageSharp: { fluid },
-    },
+    allContentfulHome: { nodes },
   },
 }) {
   return (
     <div style={{ overflowX: "hidden" }}>
-      <MenuBtn home />
+      <div className="half-background"></div>
+      {/* <MenuBtn home />
       <div className="homenavbar">
         <Homenavbar />
       </div>
-      <Layout home contact>
-        <div className="hero">
-          <div className="hero-title">
-            <Logo />
-          </div>
-          <div className="hero-pic">
-            <Img
-              className="img"
-              fluid={fluid}
-              alt="ROBERTAEBASTA’ S HIGHLIGHTS"
-              backgroundColor="#b8d6d2"
-              FadeIn={true}
-              durationFadeIn={2000}
-            />
-            <p className="desc-side">ROBERTAEBASTA’ S HIGHLIGHTS</p>
-            <p className="century-mobile">20TH CENTURY DESIGN</p>
-          </div>
+      <div className="navbar-fixed">
+        <Searchbar home />
+      </div> */}
+      <main className="main-home">
+        <Homenavbar />
+        <Searchbar />
+        <div className="hero-title">
+          <Logo />
         </div>
-      </Layout>
+        <div className="hero">
+          <div className="hero-pic">
+            <SliderTimer data={nodes} />
+            {/* <p className="century-mobile">20TH CENTURY DESIGN</p> */}
+          </div>
+          <p className="desc-side">ROBERTAEBASTA’ S HIGHLIGHTS</p>
+        </div>
+        <div className="century" style={{}}>
+          20TH CENTURY DESIGN
+        </div>
+        <Footer contact home />
+      </main>
     </div>
   )
 }
 
 export const query = graphql`
   {
-    file(relativePath: { eq: "hero-pic.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 5000, quality: 100) {
-          ...GatsbyImageSharpFluid_noBase64
+    allContentfulHome {
+      nodes {
+        indirizzo
+        foto {
+          fluid(maxWidth: 5000, quality: 100) {
+            ...GatsbyContentfulFluid_noBase64
+          }
         }
       }
     }

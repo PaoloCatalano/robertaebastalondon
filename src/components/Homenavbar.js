@@ -8,7 +8,7 @@ const Homenavbar = () => {
   )
 
   return (
-    <div className="navbar">
+    <div className="navbar" style={{ position: "static" }}>
       <ul>
         {links.map(({ url, label }, index) => {
           return (
