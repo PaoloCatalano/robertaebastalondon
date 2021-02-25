@@ -1,5 +1,5 @@
 import React from "react"
-import { GoSearch } from "react-icons/go"
+import { FaSistrix } from "react-icons/fa"
 import { Link } from "gatsby"
 
 const Searchbar = ({ home }) => {
@@ -8,7 +8,7 @@ const Searchbar = ({ home }) => {
       <div className="footer">
         <input type="text" />
         <button type="submit" className="submit">
-          <GoSearch />
+          <FaSistrix />
         </button>
       </div>
     </div>

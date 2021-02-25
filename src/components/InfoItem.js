@@ -1,7 +1,18 @@
 import React from "react"
 import ReactMarkdown from "react-markdown"
 import Logo from "../components/Logo"
-const InfoItem = ({ designer, period, titolo, descrizione, slug, sold }) => {
+import { IoIosArrowDown } from "react-icons/io"
+
+const InfoItem = ({
+  designer,
+  period,
+  titolo,
+  descrizione,
+  slug,
+  sold,
+  modal,
+  setShowInfo,
+}) => {
   return (
     <div className="item-info">
       <div style={{ zIndex: 90 }}>
@@ -33,6 +44,16 @@ const InfoItem = ({ designer, period, titolo, descrizione, slug, sold }) => {
           <div className="underline"></div>
         </button>
       </div>
+      {modal && (
+        <button
+          className="submit switcher"
+          onClick={() => {
+            setShowInfo(false)
+          }}
+        >
+          <IoIosArrowDown className="icon" />
+        </button>
+      )}
     </div>
   )
 }

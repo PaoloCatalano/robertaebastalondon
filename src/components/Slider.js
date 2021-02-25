@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react"
 import Img from "gatsby-image"
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io"
+import { AiOutlineZoomIn } from "react-icons/ai"
 
-const Slider = ({ data, alt, sold }) => {
+const Slider = ({ data, alt }) => {
   const [photos, setPhotos] = useState(data)
   const [index, setIndex] = React.useState(0)
 
@@ -47,7 +48,7 @@ const Slider = ({ data, alt, sold }) => {
           <button className="prev" onClick={prevSlide}>
             <IoIosArrowBack className="arrow" />
           </button>
-          <div></div>
+          <div className="__separator"></div>
           <button className="next" onClick={nextSlide}>
             <IoIosArrowForward className="arrow" />
           </button>
@@ -68,6 +69,16 @@ const Slider = ({ data, alt, sold }) => {
 
           return (
             <article className={`slide ${position}`} key={photoIndex}>
+              <a
+                className="zoom"
+                target="_blank"
+                rel="noopener noreferrer"
+                href={photo.fluid.src}
+              >
+                <button className=" submit">
+                  <AiOutlineZoomIn />
+                </button>
+              </a>
               <Img
                 className="sliding-img"
                 fluid={photo.fluid}
@@ -87,7 +98,7 @@ const Slider = ({ data, alt, sold }) => {
             <span
               className="dot"
               key={btnIndex}
-              // style={index === btnIndex ? active : undefined}
+              style={index === btnIndex ? active : undefined}
               // onClick={() => setIndex(btnIndex) }
             ></span>
           )
@@ -95,6 +106,10 @@ const Slider = ({ data, alt, sold }) => {
       </div>
     </section>
   )
+}
+
+const active = {
+  backgroundColor: "#ffffff",
 }
 
 export default Slider

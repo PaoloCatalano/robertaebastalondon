@@ -1,11 +1,10 @@
 import React, { useEffect, useRef, useState } from "react"
 import { graphql } from "gatsby"
-import ReactMarkdown from "react-markdown"
 import Logo from "../components/Logo"
-import Img from "gatsby-image"
 import InfoItem from "../components/InfoItem"
 import Slider from "../components/Slider"
-
+import { HiOutlineXCircle } from "react-icons/hi"
+import { IoIosArrowUp } from "react-icons/io"
 const ItemTemplates = ({ data }) => {
   const {
     items: { nodes },
@@ -23,75 +22,39 @@ const ItemTemplates = ({ data }) => {
   } = nodes[0]
 
   const alt = `${designer + ", " + titolo + ", " + keywords}`
-  // switcher
-  // const info = useRef(null)
-  // const up = useRef(null)
-  // const down = useRef(null)
 
-  // const [isUp, setIsUp] = useState(null)
-
-  // const switchUp = () => {
-  //   setIsUp("10%")
-  // }
-  // const switchDown = () => {
-  //   setIsUp("50%")
-  // }
-
-  // useEffect(() => {
-  //   if (isUp === "10%") {
-  //     up.current.style.display = "none"
-  //     info.current.style.top = isUp
-  //     down.current.style.display = "grid"
-  //   }
-  //   if (isUp === "50%") {
-  //     up.current.style.display = "grid"
-  //     info.current.style.top = isUp
-  //     down.current.style.display = "none"
-  //   }
-  // }, [isUp])
   //-----------------------------------------------------------------
   //stile navbar
   const [showInfo, setShowInfo] = useState(false)
-  const info = useRef(null)
-  const section = useRef(null)
-  const infoBlock = useRef(null)
 
   const toggleInfo = () => {
     setShowInfo(!showInfo)
   }
-  useEffect(() => {
-    // window.scrollTo(
-    //   0,
-    //   document.body.scrollHeight + section.current.scrollHeight
-    // )
-    console.log(info.current.style)
-  }, [showInfo])
 
-  useEffect(() => {
-    const linksHeight = section.current.getBoundingClientRect().height
+  // useEffect(() => {
+  //   if (showInfo) {
+  //     info.current.style.display = "block"
+  //   } else {
+  //     info.current.style.display = "none"
+  //   }
+  // }, [showInfo])
 
-    if (showInfo) {
-      info.current.style.height = `${linksHeight}px`
-      infoBlock.current.style.transform = "translateY(-90%)"
-    } else {
-      info.current.style.height = "0px"
-      infoBlock.current.style.transform = "translateY(0)"
-    }
-  }, [showInfo])
   const handleBack = () => {
-    console.log("back")
-    window.history.back()
+    if (window.history.state === null) {
+      window.location.replace("/collection/")
+    } else {
+      window.history.back()
+    }
   }
 
   return (
     <div className="single-object">
-      <button
-        className="submit"
-        style={{ position: "absolute", zIndex: 99 }}
-        onClick={handleBack}
-      >
-        BACK
+      <button className="submit close-item" onClick={handleBack}>
+        <HiOutlineXCircle />
       </button>
+      <div className="show-logo">
+        <Logo />
+      </div>
       <div className="item-pics">
         <Slider data={fotoOggetto} alt={alt} sold={sold} />
       </div>
@@ -105,22 +68,32 @@ const ItemTemplates = ({ data }) => {
           sold={sold}
         />
       </div>
-      <div className="item-info-mobile" ref={infoBlock}>
-        <div ref={info} className="info-container">
-          <div ref={section}>
-            <InfoItem
-              designer={designer}
-              period={period}
-              titolo={titolo}
-              descrizione={descrizione}
-              slug={slug}
-              sold={sold}
-            />
-          </div>
-        </div>
-        <button className="submit switcher" onClick={toggleInfo}>
-          {showInfo ? "less info" : "more info"}
+      <div className={`info-modal ${showInfo ? "" : "hide"}`}>
+        <InfoItem
+          designer={designer}
+          period={period}
+          titolo={titolo}
+          descrizione={descrizione}
+          slug={slug}
+          sold={sold}
+          modal
+          setShowInfo={setShowInfo}
+        />
+      </div>
+      <div className={`item-info-mobile ${showInfo ? "hiding" : ""}`}>
+        <button
+          // className="submit switcher"
+          className={`submit switcher ${showInfo ? "icon-down" : ""}`}
+          onClick={() => {
+            setShowInfo(true)
+          }}
+        >
+          <IoIosArrowUp className={`icon ${showInfo ? "rotate" : ""}`} />
         </button>
+        <div className="info-des-tit">
+          <div>{designer}</div>
+          <p>{titolo}</p>
+        </div>
       </div>
     </div>
   )
@@ -138,7 +111,7 @@ export const query = graphql`
         }
         sold
         fotoOggetto {
-          fluid(quality: 100) {
+          fluid(maxWidth: 4000, quality: 100) {
             ...GatsbyContentfulFluid_noBase64
           }
         }

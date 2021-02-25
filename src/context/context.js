@@ -14,7 +14,6 @@ const GatsbyProvider = ({ children }) => {
     setIsSidebarOpen(true)
   }
   const hideSidebar = () => {
-    console.log("hideSidebar")
     setIsSidebarOpen(false)
   }
 
@@ -27,6 +26,7 @@ const GatsbyProvider = ({ children }) => {
         hideSidebar,
         clicked,
         setClicked,
+        setIsSidebarOpen,
       }}
     >
       {children}

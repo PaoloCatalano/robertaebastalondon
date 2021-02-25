@@ -1,11 +1,10 @@
-import React from 'react'
+import React from "react"
+import { Redirect } from "@reach/router"
 
-const about = () => {
-    return (
-        <div>
-            about
-        </div>
-    )
+const About = () => <Redirect to="/about/our-history/" />
+
+{
+  /* <Redirect to="/about/our-history/" /> */
 }
 
-export default about
+export default About

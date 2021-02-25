@@ -18,10 +18,9 @@ export default function Home({
       <div className="homenavbar">
         <Homenavbar />
       </div>
-      <Layout home>
+      <Layout home contact>
         <div className="hero">
           <div className="hero-title">
-            {/* <p>DECORATIVE ARTS AND DESIGN OF THE 20TH CENTURY</p> */}
             <Logo />
           </div>
           <div className="hero-pic">
@@ -34,6 +33,7 @@ export default function Home({
               durationFadeIn={2000}
             />
             <p className="desc-side">ROBERTAEBASTA’ S HIGHLIGHTS</p>
+            <p className="century-mobile">20TH CENTURY DESIGN</p>
           </div>
         </div>
       </Layout>

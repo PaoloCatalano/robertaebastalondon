@@ -5,8 +5,7 @@ import GridPics from "../components/GridPics"
 import Layout from "../components/Layout"
 import products from "../assets/products"
 import { Link, graphql } from "gatsby"
-import Logo from "../components/Logo"
-import MenuBtn from "../components/MenuBtn"
+import NavbarFixed from "../components/NavbarFixed"
 import { GatsbyContext } from "../context/context"
 
 const Collection = ({ data, pagination }) => {
@@ -46,12 +45,10 @@ const Collection = ({ data, pagination }) => {
   })
   const categories = [...new Set(tempProd)]
 
+  //
   return (
     <>
-      <div className="logo-top">
-        <Logo />
-      </div>
-      <MenuBtn />
+      <NavbarFixed />
       <Sidebar>
         <div className="collection-title">
           collection
@@ -66,7 +63,6 @@ const Collection = ({ data, pagination }) => {
         />
       </Sidebar>
       <Layout
-        width={0}
         subcategory={sottocategoria || subcategory}
         page={page}
         products={nodes}

@@ -2,11 +2,12 @@ import React from "react"
 import { AiOutlineInstagram } from "react-icons/ai"
 import { TiSocialFacebook } from "react-icons/ti"
 
-const Footer = ({ contact, nofooter }) => {
+const Footer = ({ contact, nofooter, home }) => {
   return nofooter ? (
     <div></div>
   ) : (
     <div className="footer">
+      {home && <p className="century">20TH CENTURY DESIGN</p>}
       {contact && (
         <div className="footer-contact">
           <a href="mailto:london@robertaebasta.com">london@robertaebasta.com</a>

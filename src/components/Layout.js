@@ -1,10 +1,12 @@
-import React, { useContext } from "react"
+import React, { useContext, useEffect } from "react"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import Searchbar from "../components/Searchbar"
 import Categories from "../components/Categories"
-
+import AboutUs from "../components/AboutUs"
 import { GatsbyContext } from "../context/context"
+import Logo from "../components/Logo"
+import MenuBtn from "../components/MenuBtn"
 
 const Layout = ({
   children,
@@ -15,14 +17,22 @@ const Layout = ({
   setProducts,
   home,
   nofooter,
+  contact,
+  oneModal,
+  about,
 }) => {
-  const { isSidebarOpen } = useContext(GatsbyContext)
+  const { isSidebarOpen, setIsSidebarOpen } = useContext(GatsbyContext)
+  useEffect(() => {
+    setIsSidebarOpen(false)
+  }, [])
   return (
     <>
-      <div className="half-background" style={{ width: `${width}px` }}></div>
-      <Searchbar home={home} />
+      {home && (
+        <div className="half-background" style={{ width: `${width}px` }}></div>
+      )}
+
       <aside className={`${isSidebarOpen ? "show-modal" : ""}`}>
-        <Navbar>
+        <Navbar oneModal={oneModal}>
           {products ? (
             <Categories
               subcategory={subcategory}
@@ -30,15 +40,29 @@ const Layout = ({
               products={products}
               setProducts={setProducts}
             />
+          ) : about ? (
+            <AboutUs />
           ) : (
             ""
           )}
         </Navbar>
       </aside>
       <main>
-        <div style={{ height: 100, width: "100vw" }}></div>
+        <div style={{ height: 100, width: "100vw" }}>
+          <div className="navbar-static">
+            {!home && (
+              <div className="logo-menu">
+                <div className="logo-top">
+                  <Logo />
+                </div>
+                <MenuBtn />
+              </div>
+            )}
+            <Searchbar home={home} />
+          </div>
+        </div>
         <div>{children}</div>
-        <Footer contact={true} nofooter={nofooter} />
+        <Footer contact={contact} nofooter={nofooter} home={home} />
       </main>
     </>
   )
