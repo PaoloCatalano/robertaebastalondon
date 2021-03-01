@@ -7,9 +7,6 @@ const Subcategory = ({ subcategory, setProducts, products }) => {
 
   const showFiltered = (type, typeIndex) => {
     setIndex(typeIndex)
-    // setProducts(products)
-    console.log("subcat", products)
-
     const tempProducts = products.filter(
       product => product.sottocategoria.toLocaleLowerCase() === type
     )

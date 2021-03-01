@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext, useEffect } from "react"
 import Homenavbar from "../components/Homenavbar"
 import Layout from "../components/Layout"
 import MenuBtn from "../components/MenuBtn"
@@ -8,40 +8,51 @@ import Img from "gatsby-image"
 import Searchbar from "../components/Searchbar"
 import SliderTimer from "../components/SliderTimer"
 import Footer from "../components/Footer"
+import Navbar from "../components/Navbar"
+import { GatsbyContext } from "../context/context"
 
 export default function Home({
   data: {
     allContentfulHome: { nodes },
   },
 }) {
+  const { isSidebarOpen, setIsSidebarOpen } = useContext(GatsbyContext)
+  useEffect(() => {
+    setIsSidebarOpen(false)
+  }, [])
+
   return (
     <div style={{ overflowX: "hidden" }}>
-      <div className="half-background"></div>
-      {/* <MenuBtn home />
-      <div className="homenavbar">
-        <Homenavbar />
-      </div>
-      <div className="navbar-fixed">
-        <Searchbar home />
-      </div> */}
-      <main className="main-home">
-        <Homenavbar />
-        <Searchbar />
-        <div className="hero-title">
-          <Logo />
-        </div>
-        <div className="hero">
-          <div className="hero-pic">
-            <SliderTimer data={nodes} />
-            {/* <p className="century-mobile">20TH CENTURY DESIGN</p> */}
+      <div className="half-background">
+        <aside className={`${isSidebarOpen ? "show-modal" : ""}`}>
+          <Navbar oneModal />
+        </aside>
+        <MenuBtn home />
+        <main className="main-home">
+          <Homenavbar />
+          <Searchbar />
+          <div className="hero-title">
+            <Logo />
+            <div className="hero no-mobile">
+              <div className="hero-pic">
+                <SliderTimer data={nodes} />
+              </div>
+              <p className="desc-side">ROBERTAEBASTA’ S HIGHLIGHTS</p>
+            </div>
           </div>
-          <p className="desc-side">ROBERTAEBASTA’ S HIGHLIGHTS</p>
-        </div>
-        <div className="century" style={{}}>
-          20TH CENTURY DESIGN
-        </div>
-        <Footer contact home />
-      </main>
+          <div className="no-mobile"></div>
+          <div className="hero yes-mobile">
+            <div className="hero-pic">
+              <SliderTimer data={nodes} />
+            </div>
+            <p className="desc-side">ROBERTAEBASTA’ S HIGHLIGHTS</p>
+          </div>
+          <div className="century" style={{}}>
+            20TH CENTURY DESIGN
+          </div>
+          <Footer contact home />
+        </main>
+      </div>
     </div>
   )
 }

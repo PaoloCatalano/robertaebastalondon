@@ -13,6 +13,13 @@ const InfoItem = ({
   modal,
   setShowInfo,
 }) => {
+  const [link, setLink] = React.useState(slug)
+  React.useEffect(() => {
+    if (typeof window !== undefined) {
+      setLink(window.location.href)
+    }
+  }, [])
+
   return (
     <div className="item-info">
       <div style={{ zIndex: 90 }}>
@@ -37,7 +44,7 @@ const InfoItem = ({
             target="_blank"
             rel="noreferrer noopener"
             className="item-a"
-            href={`mailto:paolo12587@gmail.com?subject=Enquire for the item ${slug}&body=Link to the item: ${window.location.href}`}
+            href={`mailto:paolo12587@gmail.com?subject=Enquire for the item ${slug}&body=Link to the item: ${link}`}
           >
             Enquire now
           </a>

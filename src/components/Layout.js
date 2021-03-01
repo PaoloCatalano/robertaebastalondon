@@ -7,7 +7,6 @@ import AboutUs from "../components/AboutUs"
 import { GatsbyContext } from "../context/context"
 import Logo from "../components/Logo"
 import MenuBtn from "../components/MenuBtn"
-import Homenavbar from "../components/Homenavbar"
 
 const Layout = ({
   children,

@@ -22,6 +22,7 @@ const Collection = ({ data, pagination }) => {
   } = data
 
   const [prodotto, setprodotto] = useState(nodes)
+
   //subcategoryfilter
   const listaSottocategoria = nodes.map(item => {
     return item.sottocategoria.toLocaleLowerCase()

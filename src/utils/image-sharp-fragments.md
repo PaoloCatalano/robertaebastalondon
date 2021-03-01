@@ -1,10 +1,10 @@
-**********\*\*\*\***********\_**********\*\*\*\***********FIXED
+****\*\*****\*\*\*\*****\*\*****\_****\*\*****\*\*\*\*****\*\*****FIXED
 ...GatsbyContentfulFixed
 ...GatsbyContentfulFixed_noBase64
 ...GatsbyContentfulFixed_tracedSVG
 ...GatsbyContentfulFixed_withWebp
 ...GatsbyContentfulFixed_withWebp_noBase64
-**********\*\*\*\***********\_**********\*\*\*\***********FLUID
+****\*\*****\*\*\*\*****\*\*****\_****\*\*****\*\*\*\*****\*\*****FLUID
 ...GatsbyContentfulFluid
 ...GatsbyContentfulFluid_noBase64
 ...GatsbyContentfulFluid_tracedSVG
@@ -19,24 +19,14 @@
 
 #
 
----
-
-#
-
-#
-
-#
-
-#
-
-**********\*\*\*\***********\_**********\*\*\*\***********FIXED
+****\*\*****\*\*\*\*****\*\*****\_****\*\*****\*\*\*\*****\*\*****FIXED
 ...GatsbyImageSharpFixed
 ...GatsbyImageSharpFixed_noBase64
 ...GatsbyImageSharpFixed_tracedSVG
 ...GatsbyImageSharpFixed_withWebp
 ...GatsbyImageSharpFixed_withWebp_noBase64
 ...GatsbyImageSharpFixed_withWebp_tracedSVG
-**********\*\*\*\***********\_**********\*\*\*\***********FLUID
+****\*\*****\*\*\*\*****\*\*****\_****\*\*****\*\*\*\*****\*\*****FLUID
 ...GatsbyImageSharpFluid
 ...GatsbyImageSharpFluid_noBase64
 ...GatsbyImageSharpFluid_tracedSVG

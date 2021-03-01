@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Link } from "gatsby"
 import Subcategory from "../components/Subcategory"
 import { useStaticQuery, graphql } from "gatsby"
+import { GatsbyContext } from "../context/context"
 
 const Categories = ({
   categories,
@@ -10,6 +11,8 @@ const Categories = ({
   setProducts,
   products,
 }) => {
+  //               {category.replaceAll("-", " ")}
+
   const {
     allContentfulOggetto: { nodes },
   } = useStaticQuery(graphql`
@@ -94,6 +97,9 @@ const Categories = ({
       }
     })
   }, [is1coll])
+
+  const { hideSidebar } = useContext(GatsbyContext)
+
   return (
     <ul className="cat-container">
       {sortedCategories.map((category, index) => {
@@ -107,8 +113,12 @@ const Categories = ({
               alt={category}
               className="collection-link"
               activeStyle={active}
+              onClick={() => {
+                setProducts(products)
+                hideSidebar()
+              }}
             >
-              {category.replaceAll("-", " ")}
+              {category.replace(/-/g, " ")}
             </Link>
             <div className="subcategory">
               {page === category ? (

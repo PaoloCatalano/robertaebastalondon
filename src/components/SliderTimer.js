@@ -44,17 +44,6 @@ const Slider = ({ data, alt }) => {
   return (
     <section className="slider">
       <div className="section-center">
-        <div className="slider-comandi">
-          <button className="prev" onClick={prevSlide}>
-            <IoIosArrowBack className="arrow" />
-          </button>
-          <div className="__separator"></div>
-          <button className="next" onClick={nextSlide}>
-            <IoIosArrowForward className="arrow" />
-          </button>
-        </div>
-        {/* </div> */}
-
         {photos.map((photo, photoIndex) => {
           let position = "nextSlide"
           if (photoIndex === index) {
@@ -77,9 +66,9 @@ const Slider = ({ data, alt }) => {
                   className="img"
                   fluid={photo.foto.fluid}
                   alt={alt ? alt : "Robertaebasta London"}
-                  backgroundColor="#bde0d9"
+                  backgroundColor="transparent"
                   FadeIn={true}
-                  durationFadeIn={2000}
+                  durationFadeIn={500}
                   style={{ height: "100%" }}
                 />
               </Link>

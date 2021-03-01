@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     url: "our-history",
-    label: "out history",
+    label: "our history",
   },
   {
     id: 2,

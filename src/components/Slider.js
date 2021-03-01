@@ -60,19 +60,19 @@ const Slider = ({ data, alt }) => {
                 rel="noopener noreferrer"
                 href={photo.fluid.src}
               >
-                <button className=" submit">
+                {/* <button className=" submit">
                   <AiOutlineZoomIn />
-                </button>
+                </button> */}
+                <Img
+                  className="sliding-img"
+                  fluid={photo.fluid}
+                  alt={alt ? alt : "Robertaebasta London"}
+                  backgroundColor="#ffffff"
+                  FadeIn={true}
+                  durationFadeIn={500}
+                  style={{ height: "100%" }}
+                />
               </a>
-              <Img
-                className="sliding-img"
-                fluid={photo.fluid}
-                alt={alt ? alt : "Robertaebasta London"}
-                backgroundColor="#ffffff"
-                FadeIn={true}
-                durationFadeIn={2000}
-                style={{ height: "100%" }}
-              />
             </article>
           )
         })}

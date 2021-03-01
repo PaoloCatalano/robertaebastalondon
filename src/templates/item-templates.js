@@ -5,6 +5,7 @@ import InfoItem from "../components/InfoItem"
 import Slider from "../components/Slider"
 import { HiOutlineXCircle } from "react-icons/hi"
 import { IoIosArrowUp } from "react-icons/io"
+import { navigate } from "@reach/router"
 const ItemTemplates = ({ data }) => {
   const {
     items: { nodes },
@@ -40,8 +41,10 @@ const ItemTemplates = ({ data }) => {
   // }, [showInfo])
 
   const handleBack = () => {
-    if (window.history.state === null) {
-      window.location.replace("/collection/")
+    if (window.history.state === null || typeof window === undefined) {
+      // window.location.replace("/collection/")
+      // navigate("https://robertaebasta-prova.netlify.app/collection/")
+      navigate("/collection/")
     } else {
       window.history.back()
     }
@@ -112,7 +115,7 @@ export const query = graphql`
         sold
         fotoOggetto {
           fluid(maxWidth: 4000, quality: 100) {
-            ...GatsbyContentfulFluid_noBase64
+            ...GatsbyContentfulFluid
           }
         }
         slug: indirizzo
