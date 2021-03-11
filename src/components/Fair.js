@@ -11,7 +11,7 @@ const Fair = () => {
           }
         }
       }
-      biaf: file(relativePath: { eq: "Biaf-logo.png" }) {
+      biaf: file(relativePath: { eq: "Biaf-logo.jpg" }) {
         p: childImageSharp {
           f: fluid {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -38,7 +38,7 @@ const Fair = () => {
   console.log(master.p.f.src.slice(master.p.f.src.lastIndexOf("/") + 1))
   return (
     <div className="about-container">
-      <div className="collection-title">
+      <div className="collection-title get-bigger">
         art fairs
         <div className="underline"></div>
       </div>

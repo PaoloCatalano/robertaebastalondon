@@ -16,7 +16,7 @@ Variables
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --active: 0px 0.5px 0 var(--gray); /* box-shadow */
 
-  --spacing: 0.25em;
+  --spacing: 0.2em;
   --spacing-large: 0.3em;
   /* --f-small: 10.6px;
   --f-medium: 13.3px;
@@ -191,6 +191,10 @@ CSS components
     padding-top: 6rem;
   }
 }
+.margin-bottom {
+  margin-bottom: 5rem;
+}
+
 /* =========
 LOGO
 ============*/
@@ -284,7 +288,7 @@ nav {
   transition: var(--transition);
 }
 .navbar li {
-  /* margin: 0 2rem; */
+  /* margin: 0 2rem;url */
   text-transform: uppercase;
 }
 .hidden-navlinks {
@@ -317,7 +321,7 @@ MENU BTN
   top: 15px;
   left: 15px;
 }
-@media screen and (min-width: 1001px) {
+@media screen and (min-width: 1242px) {
   .MenuBtnHome {
     display: none;
   }
@@ -329,10 +333,7 @@ aside {
   opacity: 0;
   transform: translateX(100%);
   position: fixed;
-  background-color: var(--azure-transparent);
-  background: url("../assets/modal.jpg");
-  background-size: cover;
-  background-position: center;
+  background-color: var(--white);
   z-index: 90;
   overflow: hidden;
 }
@@ -362,10 +363,7 @@ aside {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background: var(--azure);
-  background: url("../assets/modal.jpg");
-  background-size: cover;
-  background-position: center;
+  background: var(--white);
   transform: translateX(0);
   display: block;
   font-size: var(--f-medium);
@@ -486,7 +484,9 @@ HERO
   /* margin-right: 10rem; */
 }
 
-@media screen and (max-width: 1241px), (max-aspect-ratio: 19.5/9) {
+/* @media screen and (max-width: 1242px), (max-aspect-ratio: 19.5/9) { */
+
+@media screen and (max-width: 1241px) {
   .main-home {
     /* grid: 120px 150px 30% 30% 45px/ 1fr; */
     grid: 1fr 1fr 1.3fr 1.3fr 0.3fr/ 100vw;
@@ -669,7 +669,8 @@ HERO
   display: none !important;
 }
 
-@media screen and (max-width: 1241px), (max-aspect-ratio: 19.5/9) {
+/* @media screen and (max-width: 1241px), (max-aspect-ratio: 19.5/9) { */
+@media screen and (max-width: 1241px) {
   .no-mobile {
     display: none !important;
   }
@@ -677,7 +678,7 @@ HERO
     display: grid !important;
   }
 }
-@media screen and (max-width: 1331px) and (min-width: 1241px) {
+@media screen and (max-width: 1331px) and (min-width: 1242px) {
   .main-home {
     grid: 100px auto 100px / 65% auto;
   }
@@ -685,7 +686,7 @@ HERO
     width: 65%;
   }
 }
-@media screen and (min-width: 1241px) and (max-height: 660px) {
+@media screen and (min-width: 1242px) and (max-height: 660px) {
   .main-home {
     grid: 50px auto 100px / 70% auto;
   }
@@ -838,9 +839,7 @@ Collection
 .cat-container {
   margin: 0 1rem;
 }
-.cat-container .initial-cat:first-child a {
-  border-bottom: solid 0.1px var(--gray-dark);
-}
+
 .cat-list {
   margin: 0.5rem 0;
   text-transform: uppercase;
@@ -1386,38 +1385,33 @@ HISTORY
 ========== 
 */
 .about-container {
-  width: 46rem;
+  width: 48rem;
 }
 .phantom-column-about {
   width: 223px;
   min-width: 23vh;
   height: 100vh;
 }
-.section1 {
-  display: grid;
-  grid: 1fr / 1fr 1fr;
-}
+
 .section2 .flex {
-  padding-top: 6rem;
-  padding-bottom: 2rem;
+  padding: 2rem 0;
 }
 .smaller-pic {
-  width: 336px;
+  width: 450px;
   height: auto;
 }
 .section1 p,
 .section2 p {
-  margin-bottom: 1rem;
   text-align: justify;
 }
 .section1 article,
 .section2 article {
   padding: 1rem;
 }
-.parag2 {
+/* .parag2 {
   display: grid;
-  grid: 50% 50% / 1fr;
-}
+  grid: 50% 50% / 1fr;max-aspect-ratio
+} */
 
 @media screen and (max-width: 1001px) {
   .about-container {
@@ -1434,12 +1428,33 @@ HISTORY
 }
 .gal-container {
   display: grid;
-  grid: 207px 207px / 352px 352px;
+  grid: repeat(2, 280px) / repeat(2, 352px);
+  place-content: center;
 }
 @media screen and (min-width: 1500px) {
   .gal-container {
     display: grid;
-    grid: 30vh 30vh / 55% 55%;
+    grid: repeat(2, 35vh) / repeat(2, 50%);
+  }
+  .gal-container li {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .about-container {
+    width: 75rem;
+  }
+  .get-bigger {
+    font-size: 20px;
+    line-height: normal;
+  }
+  .section1 p,
+  .section2 p {
+    font-size: 18px;
+    line-height: normal;
+  }
+  .smaller-pic {
+    width: 550px;
+    height: auto;
   }
 }
 .single-gal {
@@ -1485,9 +1500,7 @@ HISTORY
 }
 @media screen and (max-width: 770px) {
   .gal-container {
-    display: grid;
-    grid: repeat(4, 207px) / 352px;
-    place-content: center;
+    grid: repeat(4, 280px) / 352px;
   }
   .single-gal {
     justify-self: center;
@@ -1495,14 +1508,11 @@ HISTORY
 }
 .fairs {
   display: grid;
-  grid: 40vw 40vw / 45vw 45vw;
+  grid: repeat(2, 320px) / repeat(2, 300px);
   place-items: center;
 }
 .fair {
-  width: 30vw;
-  height: 30vw;
-  display: grid;
-  grid: 1fr 10% / 1fr;
+  width: 80%;
 }
 .fair p {
   font-size: var(--f-medium);
@@ -1511,6 +1521,13 @@ HISTORY
   padding: 1rem 0 0 0;
   margin: 0;
 }
+
+@media screen and (min-width: 1500px) {
+  .fairs {
+    grid: repeat(2, 370px) / repeat(2, 400px);
+  }
+}
+
 @media screen and (max-width: 500px) {
   .fairs {
     display: flex;
@@ -1519,4 +1536,106 @@ HISTORY
   .fair {
     margin: 3rem;
   }
+}
+/* 
+=============
+= SERVICES  =
+============= 
+*/
+.section1 {
+  display: grid;
+  grid: 1fr / 0.3fr 1fr;
+  grid: 1fr / 336px 407px;
+  position: relative;
+  place-content: center;
+  margin: 2rem 0;
+}
+.serv-desc {
+  width: 408px;
+  height: 100%;
+  position: absolute;
+  top: 0rem;
+  left: 348px;
+  z-index: 20;
+  background-color: var(--azure-transparent);
+  padding: 0 3rem;
+  display: grid;
+  place-items: center;
+  text-align: justify;
+  font-weight: 600;
+}
+.service-pic {
+  width: 100%;
+}
+.services {
+  align-self: center;
+}
+.services button {
+  font-size: var(--f-large);
+}
+@media screen and (min-width: 1500px) {
+  .section1 {
+    grid: 1fr / 400px 755px;
+  }
+  .serv-desc {
+    width: 755px;
+    left: 423px;
+    font-size: 18px;
+    line-height: normal;
+  }
+  .services button {
+    font-size: 20px;
+    line-height: normal;
+  }
+}
+@media screen and (max-width: 1001px) {
+  .section1 {
+    grid: 336px 410px / 310px;
+    place-content: start;
+  }
+  .services {
+    padding: 0 2rem;
+  }
+  .serv-desc {
+    width: 310px;
+    height: 310px;
+    top: 21rem;
+    left: 32px;
+  }
+  .serv .section2 article {
+    padding: 1rem 2rem;
+  }
+  .serv .section1 {
+    padding: 0 2rem;
+  }
+}
+/* 
+=============
+= SERVICES  =
+============= 
+*/
+.links-collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+.link-collection {
+  margin: 1rem 0.5rem;
+  width: 190px;
+  position: relative;
+}
+.pic-link-collection {
+}
+.link-title {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--azure-transparent);
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: var(--f-medium);
+  text-transform: uppercase;
 }

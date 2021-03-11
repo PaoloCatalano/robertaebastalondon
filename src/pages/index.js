@@ -64,7 +64,7 @@ export const query = graphql`
         indirizzo
         foto {
           fluid(maxWidth: 5000, quality: 100) {
-            ...GatsbyContentfulFluid_noBase64
+            ...GatsbyContentfulFluid
           }
         }
       }

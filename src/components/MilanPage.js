@@ -3,7 +3,7 @@ import galleries from "../constants/galleries"
 const MilanPage = () => {
   return (
     <div className="about-container">
-      <div className="collection-title">
+      <div className="collection-title get-bigger">
         the milan galleries
         <div className="underline"></div>
       </div>

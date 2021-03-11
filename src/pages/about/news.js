@@ -1,7 +1,13 @@
 import React from "react"
+import AboutLayout from "../../components/AboutLayout"
+import NewsPage from "../../components/NewsPage"
 
 const news = () => {
-  return <div>news</div>
+  return (
+    <AboutLayout>
+      <NewsPage />
+    </AboutLayout>
+  )
 }
 
 export default news

@@ -24,42 +24,46 @@ const History = () => {
 
   return (
     <div className="about-container">
-      <div className="collection-title">
+      <div className="collection-title get-bigger">
         our history
         <div className="underline"></div>
       </div>
-      <section className="section1">
-        <article className="parag2">
+      <section className="section2">
+        <article>
           <p>
             Robertaebasta was established in Milan in 1967 by Roberta
-            Tagliavini. A creative and talented woman with a endless love for
-            objets d’art, Roberta has always sought to make a meaningful
-            contribution to the world of art and culture. Her passion and
-            eclectic taste are the true essence behind Robertaebasta’s
+            Tagliavini, a creative and talented woman with an endless love for
+            objets d’art and timeless design pieces. Roberta has always sought
+            to make a meaningful contribution to the world of art and culture.
+            Her passion and eclectic taste are what defines Robertaebasta’s
             reputation as a point of reference for the Decorative Arts and
             Design of the 20th Century.
           </p>
+        </article>
+        <div className="flex">
+          <div className="smaller-pic">
+            <Img
+              className="img"
+              fluid={pic1.c.f}
+              alt="ROBERTAEBASTA history"
+              backgroundColor="#b8d6d2"
+              FadeIn={true}
+              durationFadeIn={1000}
+            />
+          </div>
+        </div>
+        <article>
           <p>
-            Like any art lover, Roberta shares her passion and dedication to the
-            world of art and culture with her son Mattia Martinelli. Over the
+            Roberta has successfully passed on her passion and her dedication to
+            the field of art and design to her son, Mattia Martinelli. Over the
             course of his 25-year career, Mattia has been instrumental in
             developing the gallery’s international network and in nurturing new
-            relationships with clients. Mattia also works as consultant in the
-            Decorative Arts department at theMilan Court of Justice.
+            relationships with clients. Mattia’s extensive expertise and
+            integrity have allowed him to become a consultant for the Decorative
+            Arts at the Milan Court of Justice.
           </p>
         </article>
-        <article>
-          <Img
-            className="img"
-            fluid={pic1.c.f}
-            alt="ROBERTAEBASTA history"
-            backgroundColor="#b8d6d2"
-            FadeIn={true}
-            durationFadeIn={1000}
-          />
-        </article>
-      </section>
-      <section className="section2">
+
         <div className="flex">
           <div className="smaller-pic">
             <Img
@@ -73,14 +77,13 @@ const History = () => {
           </div>
         </div>
         <article>
-          <p>
-            Robertaebasta is more than a name and a gallery, Robertaebasta is a
-            world where art, creativity and history meet to give a new life to
-            objects of outstanding beauty. The Robertaebasta collection is a
-            careful selection of the finest pieces of Decorative Arts and Modern
-            Design, to offer all our clients just the very best of our shared
-            past. Through its obejcts, works of art and design pieces,
-            Robertaebasta tells a million different stories.
+          <p className="margin-bottom">
+            Robertaebasta is more than just a name, it is a world where art,
+            creativity and history meet to highlight the outstanding beauty of
+            pieces. The Robertaebasta collection comprises the finest pieces of
+            Decorative Arts and Modern Design, to offer the very best of our
+            shared past. Through its objects, works of art and design pieces,
+            Robertaebasta tells a thousand other stories.
           </p>
         </article>
       </section>

@@ -5,6 +5,10 @@ export default [
     title: "THE HEADQUATERS",
     info: (
       <ul>
+        <li>CONTACT DETAILS:</li>
+        <li> Info@robertaebasta.com</li>
+        <li>T: +39 02 861593</li>
+        <li>M: +39 335 6201596</li>
         <li>Milano, Via Fiori Chiari 2</li>
         <li>OPENING TIMES</li>
         <li>Monday:</li>
@@ -48,6 +52,7 @@ export default [
       <ul>
         <li>Milano, Via Solferino, in front of number 3</li>
         <li>(lower ground floor)</li>
+        <li>OPENING TIMES</li>
         <li>Monday:</li>
         <li>15:00 to 19:30</li>
         <li>Tuesday to Saturday:</li>

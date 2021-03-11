@@ -29,15 +29,17 @@ const Slider = ({ data, alt }) => {
   return (
     <section className="slider">
       <div className="section-center">
-        <div className="slider-comandi">
-          <button className="prev" onClick={prevSlide}>
-            <IoIosArrowBack className="arrow" />
-          </button>
-          <div className="__separator"></div>
-          <button className="next" onClick={nextSlide}>
-            <IoIosArrowForward className="arrow" />
-          </button>
-        </div>
+        {photos.length !== 1 && (
+          <div className="slider-comandi">
+            <button className="prev" onClick={prevSlide}>
+              <IoIosArrowBack className="arrow" />
+            </button>
+            <div className="__separator"></div>
+            <button className="next" onClick={nextSlide}>
+              <IoIosArrowForward className="arrow" />
+            </button>
+          </div>
+        )}
         {/* </div> */}
 
         {photos.map((photo, photoIndex) => {
@@ -51,7 +53,9 @@ const Slider = ({ data, alt }) => {
           ) {
             position = "lastSlide"
           }
-
+          if (photos.length === 1) {
+            position = "activeSlide"
+          }
           return (
             <article className={`slide ${position}`} key={photoIndex}>
               <a

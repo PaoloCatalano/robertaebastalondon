@@ -1,5 +1,5 @@
 import React from "react"
-import Collection from "../collection"
+import Collection from "../../components/Collection"
 import { graphql } from "gatsby"
 
 const lighting = ({ data }) => {
@@ -14,7 +14,7 @@ export const query = graphql`
   {
     items: allContentfulOggetto(
       filter: { categoria: { eq: "lighting" } }
-      sort: { fields: ordineDisposizione, order: ASC }
+      sort: { order: [ASC, ASC], fields: [sottocategoria, ordineDisposizione] }
     ) {
       nodes {
         titolo

@@ -1,10 +1,11 @@
-import React from "react"
+import React, { useContext } from "react"
+import { GatsbyContext } from "../context/context"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 
 const GridPics = ({ products }) => {
   // console.log("gridPics", products)
-
+  const { setChangeCollection } = useContext(GatsbyContext)
   return (
     <ul className="grid-pics">
       {products.map((prod, index) => {
@@ -23,6 +24,9 @@ const GridPics = ({ products }) => {
               to={`/collection/${slug}`}
               alt={slug}
               className={`${sold ? "sold" : ""}`}
+              onClick={() => {
+                setChangeCollection(false)
+              }}
             >
               <Img
                 fluid={fluid}

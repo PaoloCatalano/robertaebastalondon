@@ -17,12 +17,12 @@ const LondonPage = () => {
 
   return (
     <div className="about-container">
-      <div className="collection-title">
+      <div className="collection-title get-bigger">
         the london gallery
         <div className="underline"></div>
       </div>
-      <section className="section1">
-        <article className="parag2">
+      <section className="section2">
+        <article>
           <p>
             Located in a beautiful Georgian building on Pimlico Road, London’s
             Design mecca, Robertaebasta London was established in September
@@ -31,6 +31,8 @@ const LondonPage = () => {
             the block”, the gallery's ethos perfectly embraces the cosmopolitan
             nature of the city.
           </p>
+        </article>
+        <article>
           <p>
             Robertaebasta London displays a unique collection of eclectic pieces
             of modern Italian and French design, thus bringing an unconventional
@@ -41,20 +43,20 @@ const LondonPage = () => {
             just to name a few.
           </p>
         </article>
+        <div className="flex">
+          <div className="smaller-pic">
+            <Img
+              className="img"
+              fluid={pic1.c.f}
+              alt="ROBERTAEBASTA history"
+              backgroundColor="#b8d6d2"
+              FadeIn={true}
+              durationFadeIn={1000}
+            />
+          </div>
+        </div>
         <article>
-          <Img
-            className="img"
-            fluid={pic1.c.f}
-            alt="ROBERTAEBASTA history"
-            backgroundColor="#b8d6d2"
-            FadeIn={true}
-            durationFadeIn={1000}
-          />
-        </article>
-      </section>
-      <section className="section2">
-        <article>
-          <p>
+          <p className="margin-bottom">
             Over the years, Robertaebasta London has forged unique relationships
             with private clients, interior design firms and architectural
             practices and has been widely praised for its original selection of

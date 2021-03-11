@@ -39,7 +39,7 @@ const contact = () => {
               <h4>PHONE NUMBERS:</h4>
               <p>+44 ( 0 ) 7554 544125</p>
               <div className="space-mini" />
-              <p>+44 ( 0 ) 7554 544125</p>
+              <p>+44 ( 0 ) 20 7730 1263</p>
               <div className="space" />
               <h4>GALLERY:</h4>
               <p>85 Pimlico Road, Belgravia</p>

@@ -67,8 +67,6 @@ const Slider = ({ data, alt }) => {
                   fluid={photo.foto.fluid}
                   alt={alt ? alt : "Robertaebasta London"}
                   backgroundColor="transparent"
-                  FadeIn={true}
-                  durationFadeIn={500}
                   style={{ height: "100%" }}
                 />
               </Link>
