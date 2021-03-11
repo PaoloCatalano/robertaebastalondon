@@ -48,9 +48,9 @@ const Collection = ({ data, pagination }) => {
   return (
     <>
       <NavbarFixed />
-      <Sidebar>
+      <Sidebar collection>
         <div className="collection-title">
-          collection
+          <Link to="/collection">london collection</Link>
           <div className="underline"></div>
         </div>
         <Categories

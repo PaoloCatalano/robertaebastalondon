@@ -4,21 +4,13 @@ import Footer from "../components/Footer"
 import Logo from "../components/Logo"
 import Layout from "../components/Layout"
 import Sidebar from "../components/Sidebar"
+import NavbarFixed from "../components/NavbarFixed"
 
 const contact = () => {
   return (
     <div className="contact-page-body">
-      <div className="navbar-fixed">
-        <div className="logo-mobile">
-          <Logo />
-        </div>
-        <MenuBtn />
-      </div>
-      <Sidebar>
-        <div className="logo-side">
-          <Logo />
-        </div>
-      </Sidebar>
+      <NavbarFixed />
+      <Sidebar contacts></Sidebar>
       <Layout oneModal>
         <div className="contact-page">
           <div className="phantom-navbar"></div>

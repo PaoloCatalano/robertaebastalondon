@@ -3,14 +3,14 @@ import Sidebar from "../components/Sidebar"
 import Layout from "../components/Layout"
 import NavbarFixed from "../components/NavbarFixed"
 import AboutUs from "../components/AboutUs"
-
+import { Link } from "gatsby"
 const AboutLayout = ({ children }) => {
   return (
     <>
       <NavbarFixed />
-      <Sidebar>
+      <Sidebar about>
         <div className="collection-title">
-          About Us
+          <Link to="/about/our-history">About Us</Link>
           <div className="underline"></div>
         </div>
         <AboutUs />

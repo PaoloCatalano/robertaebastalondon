@@ -37,7 +37,7 @@ export default function Home({
               <div className="hero-pic">
                 <SliderTimer data={nodes} />
               </div>
-              <p className="desc-side">ROBERTAEBASTA’ S HIGHLIGHTS</p>
+              <p className="desc-side">ROBERTAEBASTA LONDON’S HIGHLIGHTS</p>
             </div>
           </div>
           <div className="no-mobile"></div>
@@ -45,11 +45,9 @@ export default function Home({
             <div className="hero-pic">
               <SliderTimer data={nodes} />
             </div>
-            <p className="desc-side">ROBERTAEBASTA’ S HIGHLIGHTS</p>
+            <p className="desc-side">ROBERTAEBASTA LONDON’S HIGHLIGHTS</p>
           </div>
-          <div className="century" style={{}}>
-            20TH CENTURY DESIGN
-          </div>
+          <div className="century">20TH CENTURY DESIGN</div>
           <Footer contact home />
         </main>
       </div>

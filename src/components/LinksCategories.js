@@ -33,6 +33,7 @@ const LinksCategories = () => {
               <div className="link-title">{link.title}</div>
 
               <Img
+                // style={{ padding: "3.6rem 0" }}
                 fluid={link.category.fluid}
                 alt={link.title}
                 className="pic-link-collection"

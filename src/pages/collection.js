@@ -13,9 +13,9 @@ const Collection = () => {
   return (
     <>
       <NavbarFixed />
-      <Sidebar>
+      <Sidebar collection>
         <div className="collection-title">
-          london collection
+          <Link to="/collection">london collection</Link>
           <div className="underline"></div>
         </div>
         <Categories />
@@ -23,7 +23,7 @@ const Collection = () => {
       <Layout nofooter>
         <div className="collection">
           <div className="phantom-column-collection"></div>
-          <div className="pics-container">
+          <div className="pics-container prev-collection">
             {/* <GridPics products={prodotto} /> */}
             <LinksCategories />
             <div className="banner-collection">
