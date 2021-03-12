@@ -35,7 +35,6 @@ const Fair = () => {
     }
   `)
 
-  console.log(master.p.f.src.slice(master.p.f.src.lastIndexOf("/") + 1))
   return (
     <div className="about-container">
       <div className="collection-title get-bigger">
@@ -54,7 +53,7 @@ const Fair = () => {
         </article>
         <article className="gal-container fairs">
           <div className="fair">
-            <Link to="">
+            <Link to="/about/art-fairs/masterpiece-london">
               <Img
                 fluid={master.p.f}
                 alt={master.p.f.src.slice(master.p.f.src.lastIndexOf("/") + 1)}
@@ -63,7 +62,7 @@ const Fair = () => {
             <p>Masterpiece London</p>
           </div>
           <div className="fair">
-            <Link to="">
+            <Link to="/about/art-fairs/brafa">
               <Img
                 fluid={brafa.p.f}
                 alt={brafa.p.f.src.slice(brafa.p.f.src.lastIndexOf("/") + 1)}
@@ -72,7 +71,7 @@ const Fair = () => {
             <p>Brafa</p>
           </div>
           <div className="fair">
-            <Link to="">
+            <Link to="/about/art-fairs/biaf">
               <Img
                 fluid={biaf.p.f}
                 alt={biaf.p.f.src.slice(biaf.p.f.src.lastIndexOf("/") + 1)}
@@ -81,7 +80,7 @@ const Fair = () => {
             <p>BIAF</p>
           </div>
           <div className="fair">
-            <Link to="">
+            <Link to="/about/art-fairs/biennale-paris">
               <Img
                 fluid={biennale.p.f}
                 alt={biennale.p.f.src.slice(

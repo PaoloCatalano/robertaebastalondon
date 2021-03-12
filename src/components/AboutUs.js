@@ -13,6 +13,7 @@ const AboutUs = () => {
               alt={link.label}
               className="collection-link"
               activeStyle={active}
+              partiallyActive={true}
             >
               {link.label}
             </Link>

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Img from "gatsby-image"
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io"
-import { AiOutlineZoomIn } from "react-icons/ai"
 
 const Slider = ({ data, alt }) => {
   const [photos, setPhotos] = useState(data)

@@ -18,9 +18,8 @@ const Collection = () => {
           <Link to="/collection">london collection</Link>
           <div className="underline"></div>
         </div>
-        <Categories />
       </Sidebar>
-      <Layout nofooter>
+      <Layout nofooter oneModal>
         <div className="collection">
           <div className="phantom-column-collection"></div>
           <div className="pics-container prev-collection">

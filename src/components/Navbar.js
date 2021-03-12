@@ -49,7 +49,7 @@ const NavbarModal = ({ children, oneModal }) => {
           <div
             className={`no-show modal-top ${isSwitched ? "" : "modal-hidden"}`}
           >
-            <div className={`modal-links`}>
+            <div className="modal-links">
               <button className="modal-switch to-L" onClick={toL}>
                 <IoIosArrowBack />
               </button>

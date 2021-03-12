@@ -30,14 +30,26 @@ const Layout = ({
       <aside className={`${isSidebarOpen ? "show-modal" : ""}`}>
         <Navbar oneModal={oneModal}>
           {products ? (
-            <Categories
-              subcategory={subcategory}
-              page={page}
-              products={products}
-              setProducts={setProducts}
-            />
+            <>
+              <div className="collection-title get-bigger">
+                london collection
+                <div className="underline"></div>
+              </div>
+              <Categories
+                subcategory={subcategory}
+                page={page}
+                products={products}
+                setProducts={setProducts}
+              />
+            </>
           ) : about ? (
-            <AboutUs />
+            <>
+              <div className="collection-title get-bigger">
+                about us
+                <div className="underline"></div>
+              </div>
+              <AboutUs />
+            </>
           ) : (
             ""
           )}

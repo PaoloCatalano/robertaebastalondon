@@ -44,7 +44,7 @@ const InfoItem = ({
             target="_blank"
             rel="noreferrer noopener"
             className="item-a"
-            href={`mailto:paolo12587@gmail.com?subject=Enquire for the item ${slug}&body=Link to the item: ${link}`}
+            href={`mailto:paolo12587@gmail.com?subject=Enquire for the item ${slug}&body=Hello Robertaebasta London,%0D%0A%0D%0AI would like to enquire about the following piece: ${titolo} (link: ${link})%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A%0D%0AI look forward to hearing from you.%0D%0A%0D%0AMany thanks`}
           >
             Enquire now
           </a>
