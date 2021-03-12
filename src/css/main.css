@@ -456,7 +456,7 @@ HERO
 .hero-title {
   display: grid;
   grid: 1fr / 1fr 1fr;
-  transform: translateX(286px);
+  transform: translateX(290px);
 }
 .main-home .searchbar {
   position: static;
