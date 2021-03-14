@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 
 const MasterpieceLondon = ({ data }) => {
   return (
-    <AboutLayout>
+    <AboutLayout title="BIAF">
       <SingleFair data={data} />
     </AboutLayout>
   )

@@ -241,6 +241,7 @@ SEARCHBAR
 }
 .searchbar input {
   width: 70px;
+  background-color: transparent;
 }
 .searchbar button {
   width: 20px;
@@ -523,6 +524,7 @@ HERO
   }
   .main-home .hero {
     justify-self: center;
+    grid: 1fr / 95% 5%;
   }
   .main-home .century {
     justify-self: center;
@@ -594,7 +596,7 @@ HERO
 }
 /* .hero .section-center {
   width: 40vw;
-  height: 36.2vw;
+  height: 36.2vw;close-item
 } */
 .hero .img {
   width: inherit;
@@ -810,19 +812,18 @@ FOOTER
 Contact us
 ========== */
 .contact-page-body {
-  overflow: hidden;
-}
-.contact-page {
-  display: flex;
-  height: 60vh;
-  width: 100vw;
+  /* overflow: hidden; */
 }
 
-@media screen and (max-width: 1001px) {
-  .contact-page-body .sidebar {
-    display: none;
-  }
+.contact-page {
+  display: flex;
+  height: 73vh;
+  width: 100vw;
 }
+.contact-page .center {
+  margin: 3.5rem auto;
+}
+
 .contact-page-body .phantom-column-collection {
   width: 0px;
 }
@@ -836,6 +837,13 @@ Contact us
 @media screen and (max-width: 1001px) {
   .logo-mobile {
     display: block;
+  }
+  .contact-page-body .sidebar {
+    display: none;
+  }
+  .contact-page {
+    height: auto;
+    max-height: 500px;
   }
 }
 
@@ -1176,6 +1184,10 @@ Slider
   color: var(--gray);
   background-color: transparent;
   font-size: 1.6rem;
+  color: var(--white);
+  border-radius: 50%;
+  background: var(--azure-transparent);
+  width: 25px;
 }
 .dots-container {
   display: flex;
@@ -1232,7 +1244,7 @@ item-template
 }
 .close-item {
   position: absolute;
-  z-index: 91;
+  z-index: 101;
   padding: 1rem;
   left: 92vw;
 }

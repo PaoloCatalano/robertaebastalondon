@@ -1,10 +1,9 @@
 import React, { useContext, useEffect } from "react"
 import Homenavbar from "../components/Homenavbar"
-import Layout from "../components/Layout"
 import MenuBtn from "../components/MenuBtn"
 import Logo from "../components/Logo"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import SEO from "../components/SEO"
 import Searchbar from "../components/Searchbar"
 import SliderTimer from "../components/SliderTimer"
 import Footer from "../components/Footer"
@@ -23,6 +22,7 @@ export default function Home({
 
   return (
     <div style={{ overflowX: "hidden" }}>
+      <SEO title="Home" />
       <div className="half-background">
         <aside className={`${isSidebarOpen ? "show-modal" : ""}`}>
           <Navbar oneModal />

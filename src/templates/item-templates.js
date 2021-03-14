@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Logo from "../components/Logo"
 import InfoItem from "../components/InfoItem"
 import Slider from "../components/Slider"
+import SEO from "../components/SEO"
 import { HiOutlineXCircle } from "react-icons/hi"
 import { IoIosArrowUp } from "react-icons/io"
 import { navigate } from "@reach/router"
@@ -18,6 +19,7 @@ const ItemTemplates = ({ data }) => {
     descrizione: { descrizione },
     sold,
     fotoOggetto,
+    fotoAnteprima: { fluid },
     slug,
     keywords,
   } = nodes[0]
@@ -52,6 +54,13 @@ const ItemTemplates = ({ data }) => {
 
   return (
     <div className="single-object">
+      <SEO
+        title={designer + " · " + titolo}
+        description={descrizione}
+        image={fluid.src}
+        cms
+        keywords={keywords}
+      />
       <button className="submit close-item" onClick={handleBack}>
         <HiOutlineXCircle />
       </button>
@@ -116,6 +125,11 @@ export const query = graphql`
         fotoOggetto {
           fluid(maxWidth: 4000, quality: 100) {
             ...GatsbyContentfulFluid
+          }
+        }
+        fotoAnteprima {
+          fluid {
+            src
           }
         }
         slug: indirizzo

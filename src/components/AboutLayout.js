@@ -4,7 +4,7 @@ import Layout from "../components/Layout"
 import NavbarFixed from "../components/NavbarFixed"
 import AboutUs from "../components/AboutUs"
 import { Link } from "gatsby"
-const AboutLayout = ({ children }) => {
+const AboutLayout = ({ children, title }) => {
   return (
     <>
       <NavbarFixed />
@@ -15,7 +15,7 @@ const AboutLayout = ({ children }) => {
         </div>
         <AboutUs />
       </Sidebar>
-      <Layout nofooter about>
+      <Layout nofooter about title={`${title || "About Us"}`}>
         <div className="collection padding">
           <div className="phantom-column-about"></div>
           <div className="flex">{children}</div>

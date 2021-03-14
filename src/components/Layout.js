@@ -6,11 +6,11 @@ import Categories from "../components/Categories"
 import AboutUs from "../components/AboutUs"
 import { GatsbyContext } from "../context/context"
 import Logo from "../components/Logo"
+import SEO from "../components/SEO"
 import MenuBtn from "../components/MenuBtn"
 
 const Layout = ({
   children,
-  width,
   subcategory,
   page,
   products,
@@ -20,13 +20,24 @@ const Layout = ({
   contact,
   oneModal,
   about,
+  title,
+  description,
+  image,
+  keywords,
 }) => {
   const { isSidebarOpen, setIsSidebarOpen } = useContext(GatsbyContext)
   useEffect(() => {
     setIsSidebarOpen(false)
   }, [])
+
   return (
     <>
+      <SEO
+        title={title}
+        description={description}
+        image={image}
+        keywords={keywords}
+      />
       <aside className={`${isSidebarOpen ? "show-modal" : ""}`}>
         <Navbar oneModal={oneModal}>
           {products ? (
@@ -70,7 +81,10 @@ const Layout = ({
           </div>
         </div>
 
-        <div style={{ display: "grid", placeItems: "center", width: "100vw" }}>
+        <div
+          style={{ display: "grid", placeItems: "center", width: "100vw" }}
+          className="layout-children"
+        >
           {children}
         </div>
 

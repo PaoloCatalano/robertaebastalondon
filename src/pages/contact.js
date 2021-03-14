@@ -11,7 +11,7 @@ const contact = () => {
     <div className="contact-page-body">
       <NavbarFixed />
       <Sidebar contacts></Sidebar>
-      <Layout oneModal>
+      <Layout oneModal title="Contacts">
         <div className="contact-page">
           <div className="phantom-navbar"></div>
           <div className="phantom-column-collection"></div>
