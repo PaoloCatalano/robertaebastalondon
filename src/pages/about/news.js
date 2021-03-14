@@ -4,7 +4,7 @@ import NewsPage from "../../components/NewsPage"
 
 const news = () => {
   return (
-    <AboutLayout>
+    <AboutLayout title="News">
       <NewsPage />
     </AboutLayout>
   )

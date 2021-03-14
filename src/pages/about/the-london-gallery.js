@@ -2,12 +2,12 @@ import React from "react"
 import AboutLayout from "../../components/AboutLayout"
 import LondonPage from "../../components/LondonPage"
 
-const ourHistory = () => {
+const londonGallery = () => {
   return (
-    <AboutLayout>
+    <AboutLayout title="The London Gallery">
       <LondonPage />
     </AboutLayout>
   )
 }
 
-export default ourHistory
+export default londonGallery

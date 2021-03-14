@@ -5,7 +5,12 @@ import { graphql } from "gatsby"
 const accessories = ({ data }) => {
   return (
     <div>
-      <Collection pagination="accessories" data={data} />
+      <Collection
+        pagination="accessories"
+        data={data}
+        title="Accessories"
+        keywords={data.items.nodes[0].categoria}
+      />
     </div>
   )
 }
@@ -26,6 +31,7 @@ export const query = graphql`
           }
         }
         slug: indirizzo
+        categoria
         sottocategoria
       }
     }

@@ -8,17 +8,13 @@ import { Link, graphql } from "gatsby"
 import NavbarFixed from "../components/NavbarFixed"
 import { GatsbyContext } from "../context/context"
 
-const Collection = ({ data, pagination }) => {
+const Collection = ({ data, pagination, title, description, keywords }) => {
   const page = pagination
   // CMS
   //category filter
-  const {
-    clicked,
-    prodotto,
-    setprodotto,
-    changeCollection,
-    setChangeCollection,
-  } = useContext(GatsbyContext)
+  const { clicked, prodotto, setprodotto, changeCollection } = useContext(
+    GatsbyContext
+  )
   // useEffect(() => {
   //   setClicked(false)
   // }, [])
@@ -66,6 +62,9 @@ const Collection = ({ data, pagination }) => {
         products={nodes}
         setProducts={setprodotto}
         nofooter
+        title={title}
+        description={description}
+        keywords={keywords}
       >
         <div className="collection">
           <div className="phantom-column-collection"></div>

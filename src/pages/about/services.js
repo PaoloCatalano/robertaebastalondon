@@ -4,7 +4,7 @@ import Services from "../../components/Services"
 
 const services = () => {
   return (
-    <AboutLayout>
+    <AboutLayout title="Services">
       <Services />
     </AboutLayout>
   )

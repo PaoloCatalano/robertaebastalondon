@@ -5,7 +5,12 @@ import { graphql } from "gatsby"
 const tables = ({ data }) => {
   return (
     <div>
-      <Collection pagination="tables" data={data} />
+      <Collection
+        pagination="tables"
+        data={data}
+        title="Tables"
+        keywords={data.items.nodes[0].categoria}
+      />
     </div>
   )
 }

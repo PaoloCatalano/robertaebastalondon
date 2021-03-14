@@ -2,12 +2,12 @@ import React from "react"
 import AboutLayout from "../../components/AboutLayout"
 import MilanPage from "../../components/MilanPage"
 
-const ourHistory = () => {
+const milanGallery = () => {
   return (
-    <AboutLayout>
+    <AboutLayout title="The Milan Galleries">
       <MilanPage />
     </AboutLayout>
   )
 }
 
-export default ourHistory
+export default milanGallery
