@@ -35,7 +35,7 @@ const Slider = ({ data, alt }) => {
         }
         return index
       })
-    }, 7000)
+    }, 4000)
     return () => {
       clearInterval(slider)
     }

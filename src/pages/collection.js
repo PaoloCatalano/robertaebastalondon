@@ -11,7 +11,7 @@ const Collection = () => {
       <NavbarFixed />
       <Sidebar collection>
         <div className="collection-title">
-          <Link to="/collection">london collection</Link>
+          <Link to="/collection">collection</Link>
           <div className="underline"></div>
         </div>
       </Sidebar>
@@ -22,9 +22,14 @@ const Collection = () => {
             <LinksCategories />
             <div className="banner-collection">
               <p>To see our full collection visit:</p>
-              <Link to="https://robertaebasta.com/" alt="robertaebasta.com">
+              <a
+                href="https://robertaebasta.com/"
+                alt="robertaebasta.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 www.robertaebasta.com
-              </Link>
+              </a>
             </div>
           </div>
         </div>

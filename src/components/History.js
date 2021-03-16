@@ -120,7 +120,7 @@ const History = () => {
           </div>
         </div>
         <article>
-          <p className="margin-bottom">
+          <p>
             Robertaebasta is more than just a name, it is a world where art,
             creativity and history meet to highlight the outstanding beauty of
             pieces. The Robertaebasta collection comprises the finest pieces of
@@ -130,10 +130,10 @@ const History = () => {
           </p>
         </article>
         <article>
-          <p style={{ marginBottom: 20 }}>
+          <p>
             Robertaebasta is delighted to be part of the following associations:
           </p>
-          <ul className="associations">
+          <ul className="associations margin-bottom">
             <li>
               <a
                 href="https://www.antiquariditalia.it/en/find/160"

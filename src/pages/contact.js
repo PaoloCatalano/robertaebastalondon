@@ -1,7 +1,4 @@
 import React from "react"
-import MenuBtn from "../components/MenuBtn"
-import Footer from "../components/Footer"
-import Logo from "../components/Logo"
 import Layout from "../components/Layout"
 import Sidebar from "../components/Sidebar"
 import NavbarFixed from "../components/NavbarFixed"
@@ -29,9 +26,13 @@ const contact = () => {
               </a>
               <div className="space" />
               <h4>PHONE NUMBERS:</h4>
-              <p>+44 ( 0 ) 7554 544125</p>
+              <p>
+                <a href="tel:+447554544125">+44 ( 0 ) 7554 544125</a>
+              </p>
               <div className="space-mini" />
-              <p>+44 ( 0 ) 20 7730 1263</p>
+              <p>
+                <a href="tel:+442077301263"> +44 ( 0 ) 20 7730 1263</a>
+              </p>
               <div className="space" />
               <h4>GALLERY:</h4>
               <p>85 Pimlico Road, Belgravia</p>
@@ -40,7 +41,7 @@ const contact = () => {
               <p>London, SW1W 8PH</p>
               <div className="space" />
               <h4>OPENING TIMES:</h4>
-              <p>Monday to Saturday : 10:00 to 18:00</p>
+              <p>Monday to Saturday: 10:00 to 18:00</p>
               <div className="space" />
               <p>To see our full collection visit:</p>
               <a

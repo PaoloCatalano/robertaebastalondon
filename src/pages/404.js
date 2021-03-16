@@ -8,7 +8,7 @@ const Error = () => {
   return (
     <div className="contact-page-body">
       <NavbarFixed />
-      <Sidebar contacts></Sidebar>
+      <Sidebar empty></Sidebar>
       <Layout oneModal title="404">
         <div className="contact-page">
           <div className="phantom-navbar"></div>

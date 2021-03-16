@@ -12,6 +12,13 @@ const GatsbyProvider = ({ children }) => {
   const [prodotto, setprodotto] = useState(null)
   const [index, setIndex] = useState(0)
   const [changeCollection, setChangeCollection] = useState(false)
+  const [search, setSearch] = useState("")
+  const [filtered, setFiltered] = useState(null)
+
+  const filterSearch = e => {
+    let value = e.target.value
+    setSearch(value)
+  }
 
   const showSidebar = () => {
     setIsSidebarOpen(true)
@@ -36,6 +43,10 @@ const GatsbyProvider = ({ children }) => {
         setIndex,
         changeCollection,
         setChangeCollection,
+        search,
+        filterSearch,
+        filtered,
+        setFiltered,
       }}
     >
       {children}

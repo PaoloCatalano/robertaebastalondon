@@ -46,7 +46,7 @@ const Collection = ({ data, pagination, title, description, keywords }) => {
       <NavbarFixed />
       <Sidebar collection>
         <div className="collection-title">
-          <Link to="/collection">london collection</Link>
+          <Link to="/collection">collection</Link>
           <div className="underline"></div>
         </div>
         <Categories
@@ -72,7 +72,12 @@ const Collection = ({ data, pagination, title, description, keywords }) => {
             {prodotto && <GridPics products={prodotto} />}
             <div className="banner-collection">
               <p>To see our full collection visit:</p>
-              <a href="https://robertaebasta.com/" alt="robertaebasta.com">
+              <a
+                href="https://robertaebasta.com/"
+                alt="robertaebasta.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 www.robertaebasta.com
               </a>
             </div>

@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Logo from "../components/Logo"
 
-const Sidebar = ({ children, collection, about, contacts }) => {
+const Sidebar = ({ children, collection, about, contacts, empty }) => {
   return (
     <div className="sidebar">
       <Logo />
@@ -10,13 +10,13 @@ const Sidebar = ({ children, collection, about, contacts }) => {
         HOME
       </Link>
       {collection && <div className="link-padding">{children}</div>}
-      {(about || contacts) && (
+      {(about || contacts || empty) && (
         <Link className="a link-padding" to="/collection">
-          LONDON COLLECTION
+          COLLECTION
         </Link>
       )}
       {about && <div className="link-padding">{children}</div>}
-      {(collection || contacts) && (
+      {(collection || contacts || empty) && (
         <Link className="a link-padding" to="/about/our-history">
           ABOUT US
         </Link>

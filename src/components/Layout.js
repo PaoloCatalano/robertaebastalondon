@@ -45,7 +45,7 @@ const Layout = ({
           {products ? (
             <>
               <div className="collection-title get-bigger">
-                london collection
+                collection
                 <div className="underline"></div>
               </div>
               <Categories

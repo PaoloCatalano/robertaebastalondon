@@ -254,8 +254,11 @@ SEARCHBAR
 .searchBarHome {
   background: transparent;
 }
+.searchsmall {
+  padding-bottom: 0;
+}
 
-/* ========phantom
+/* ========
 NAVBAR
 ========== */
 nav {
@@ -683,21 +686,19 @@ HERO
     display: grid !important;
   }
 }
-@media screen and (max-width: 1331px) and (min-width: 1242px) {
+/* @media screen and (max-width: 1331px) and (min-width: 1242px) {
   .main-home {
     grid: 100px auto 100px / 65% auto;
   }
   .half-background {
     width: 65%;
   }
-}
+} */
 @media screen and (min-width: 1001px) and (max-width: 1242px) {
   .main-home {
     grid: 100px auto 100px / 60% auto;
   }
-  .half-background {
-    width: 60%;
-  }
+
   .main-home .hero-title {
     grid: 1fr / 440px auto;
   }
@@ -713,6 +714,7 @@ HERO
     height: 392.9px;
   }
 }
+
 @media screen and (min-width: 1242px) and (max-height: 660px) {
   .main-home {
     grid: 50px auto 100px / 70% auto;
@@ -733,6 +735,17 @@ HERO
   }
   .main-home .navbar {
     align-self: end;
+  }
+}
+@media screen and (max-width: 1331px) {
+  .half-background {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1332px) {
+  .main-home {
+    grid: 50px auto 100px / 70% auto;
   }
 }
 /* ========1500
@@ -808,7 +821,7 @@ FOOTER
   color: var(--white);
 }
 
-/* ========
+/* ========search
 Contact us
 ========== */
 .contact-page-body {
@@ -915,6 +928,7 @@ Collection
 }
 .cat-container {
   margin: 0 1rem;
+  align-items: normal;
 }
 
 .cat-list {
@@ -1184,10 +1198,6 @@ Slider
   color: var(--gray);
   background-color: transparent;
   font-size: 1.6rem;
-  color: var(--white);
-  border-radius: 50%;
-  background: var(--azure-transparent);
-  width: 25px;
 }
 .dots-container {
   display: flex;
@@ -1648,9 +1658,9 @@ HISTORY
   left: 348px;
   z-index: 20;
   background-color: var(--azure-transparent);
-  padding: 0 3rem;
-  display: grid;
-  place-items: center;
+  padding: 2rem 3rem;
+  /* display: grid;
+  place-items: center; */
   text-align: justify;
   font-weight: 600;
 }
@@ -1691,6 +1701,7 @@ HISTORY
     height: 310px;
     top: 21rem;
     left: 32px;
+    padding: 0.8rem 2rem;
   }
   .serv .section2 article {
     padding: 1rem 2rem;
