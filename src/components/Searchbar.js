@@ -1,5 +1,5 @@
-import React, { useState, useContext, useEffect } from "react"
-import { FaSistrix } from "react-icons/fa"
+import React, { useContext } from "react"
+import { HiOutlineSearch } from "react-icons/hi"
 import { Link } from "gatsby"
 import { GatsbyContext } from "../context/context"
 
@@ -16,7 +16,7 @@ const Searchbar = ({ home }) => {
         />
         <button type="submit" style={{ fontSize: 20 }} className="submit">
           <Link to="/search">
-            <FaSistrix />
+            <HiOutlineSearch />
           </Link>
         </button>
       </div>

@@ -1,11 +1,8 @@
-import React, { useContext } from "react"
-import { GatsbyContext } from "../context/context"
+import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 const Logo = () => {
-  const { showSidebar } = useContext(GatsbyContext)
-
   const logo = useStaticQuery(graphql`
     {
       file(relativePath: { eq: "logo.png" }) {

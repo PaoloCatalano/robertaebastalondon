@@ -35,10 +35,16 @@ const contact = () => {
               </p>
               <div className="space" />
               <h4>GALLERY:</h4>
-              <p>85 Pimlico Road, Belgravia</p>
-              <div className="space-mini" />
+              <a
+                href="https://www.google.com/maps/place/Robertaebasta%C2%AE+Art+Gallery/@51.4901621,-0.1540795,15z/data=!4m5!3m4!1s0x0:0x9c67552f85d66517!8m2!3d51.4901649!4d-0.1540814"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p>85 Pimlico Road, Belgravia</p>
+                <div className="space-mini" />
 
-              <p>London, SW1W 8PH</p>
+                <p>London, SW1W 8PH</p>
+              </a>
               <div className="space" />
               <h4>OPENING TIMES:</h4>
               <p>Monday to Saturday: 10:00 to 18:00</p>

@@ -81,12 +81,9 @@ const Categories = ({
       return a - b
     })
 
-  const {
-    hideSidebar,
-    setIndex,
-    changeCollection,
-    setChangeCollection,
-  } = useContext(GatsbyContext)
+  const { hideSidebar, setIndex, setChangeCollection } = useContext(
+    GatsbyContext
+  )
 
   return (
     <ul className="cat-container">

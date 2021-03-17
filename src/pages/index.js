@@ -57,7 +57,7 @@ export default function Home({
 
 export const query = graphql`
   {
-    allContentfulHome {
+    allContentfulHome(sort: { order: ASC, fields: ordineDisposizione }) {
       nodes {
         indirizzo
         foto {

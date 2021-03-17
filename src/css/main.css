@@ -240,7 +240,7 @@ SEARCHBAR
   background: transparent;
 }
 .searchbar input {
-  width: 70px;
+  width: 60px;
   background-color: transparent;
 }
 .searchbar button {
@@ -258,7 +258,7 @@ SEARCHBAR
   padding-bottom: 0;
 }
 
-/* ========
+/* ========url
 NAVBAR
 ========== */
 nav {

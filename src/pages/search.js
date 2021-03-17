@@ -1,11 +1,11 @@
-import React, { useState, useContext, useEffect } from "react"
+import React, { useContext, useEffect } from "react"
 import Sidebar from "../components/Sidebar"
 import Layout from "../components/Layout"
 import NavbarFixed from "../components/NavbarFixed"
-import LinksCategories from "../components/LinksCategories"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 import { GatsbyContext } from "../context/context"
+import { graphql } from "gatsby"
 
 const Collection = ({ data }) => {
   const { filtered, setFiltered, search } = useContext(GatsbyContext)

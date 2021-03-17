@@ -1,26 +1,26 @@
 import React from "react"
-import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
+// import Img from "gatsby-image"
+// import { useStaticQuery, graphql } from "gatsby"
 
 const History = () => {
-  const { pic1, pic2 } = useStaticQuery(graphql`
-    {
-      pic1: file(relativePath: { eq: "history1.jpg" }) {
-        c: childImageSharp {
-          f: fluid(maxWidth: 5000, quality: 100) {
-            ...GatsbyImageSharpFluid_noBase64
-          }
-        }
-      }
-      pic2: file(relativePath: { eq: "history2.jpg" }) {
-        c: childImageSharp {
-          f: fluid(maxWidth: 5000, quality: 100) {
-            ...GatsbyImageSharpFluid_noBase64
-          }
-        }
-      }
-    }
-  `)
+  // const { pic1, pic2 } = useStaticQuery(graphql`
+  //   {
+  //     pic1: file(relativePath: { eq: "history1.jpg" }) {
+  //       c: childImageSharp {
+  //         f: fluid(maxWidth: 5000, quality: 100) {
+  //           ...GatsbyImageSharpFluid_noBase64
+  //         }
+  //       }
+  //     }
+  //     pic2: file(relativePath: { eq: "history2.jpg" }) {
+  //       c: childImageSharp {
+  //         f: fluid(maxWidth: 5000, quality: 100) {
+  //           ...GatsbyImageSharpFluid_noBase64
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <div className="about-container">

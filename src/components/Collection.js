@@ -1,10 +1,9 @@
-import React, { useState, useContext, useEffect } from "react"
+import React, { useContext, useEffect } from "react"
 import Sidebar from "../components/Sidebar"
 import Categories from "../components/Categories"
 import GridPics from "../components/GridPics"
 import Layout from "../components/Layout"
-import products from "../assets/products"
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 import NavbarFixed from "../components/NavbarFixed"
 import { GatsbyContext } from "../context/context"
 

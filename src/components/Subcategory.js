@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react"
+import React, { useContext } from "react"
 import { GatsbyContext } from "../context/context"
 
 const Subcategory = ({ subcategory, setProducts, products }) => {

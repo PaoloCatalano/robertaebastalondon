@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 import Logo from "../components/Logo"
 import InfoItem from "../components/InfoItem"
@@ -29,18 +29,6 @@ const ItemTemplates = ({ data }) => {
   //-----------------------------------------------------------------
   //stile navbar
   const [showInfo, setShowInfo] = useState(false)
-
-  const toggleInfo = () => {
-    setShowInfo(!showInfo)
-  }
-
-  // useEffect(() => {
-  //   if (showInfo) {
-  //     info.current.style.display = "block"
-  //   } else {
-  //     info.current.style.display = "none"
-  //   }
-  // }, [showInfo])
 
   const handleBack = () => {
     if (window.history.state === null || typeof window === undefined) {

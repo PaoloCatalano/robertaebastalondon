@@ -3,9 +3,7 @@ import { GatsbyContext } from "../context/context"
 import { Link } from "gatsby"
 
 const Homenavbar = () => {
-  const { isSidebarOpen, links, showSidebar, hideSidebar } = useContext(
-    GatsbyContext
-  )
+  const { links } = useContext(GatsbyContext)
 
   return (
     <div className="navbar" style={{ position: "static" }}>

@@ -1,30 +1,10 @@
 import React, { useState, useEffect } from "react"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
-import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io"
 
 const Slider = ({ data, alt }) => {
   const [photos, setPhotos] = useState(data)
   const [index, setIndex] = React.useState(0)
-
-  const nextSlide = () => {
-    setIndex(oldIndex => {
-      let index = oldIndex + 1
-      if (index > photos.length - 1) {
-        index = 0
-      }
-      return index
-    })
-  }
-  const prevSlide = () => {
-    setIndex(oldIndex => {
-      let index = oldIndex - 1
-      if (index < 0) {
-        index = photos.length - 1
-      }
-      return index
-    })
-  }
 
   useEffect(() => {
     let slider = setInterval(() => {
@@ -81,7 +61,6 @@ const Slider = ({ data, alt }) => {
               className="dot"
               key={btnIndex}
               style={index === btnIndex ? active : undefined}
-              // onClick={() => setIndex(btnIndex) }
             ></span>
           )
         })}
