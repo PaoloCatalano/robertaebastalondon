@@ -258,7 +258,7 @@ SEARCHBAR
   padding-bottom: 0;
 }
 
-/* ========url
+/* ========
 NAVBAR
 ========== */
 nav {
@@ -307,7 +307,7 @@ nav {
 .homenavbar {
   display: block;
 }
-/* ========yes
+/* ========
 MENU BTN
 ========== */
 .menu-btn {
@@ -336,7 +336,7 @@ MENU BTN
     display: none;
   }
 }
-/* ========1241
+/* ========
 modal
 ========== */
 aside {
@@ -748,7 +748,7 @@ HERO
     grid: 50px auto 100px / 70% auto;
   }
 }
-/* ========1500
+/* ========
 SIDEBAR
 ========== */
 .sidebar {
@@ -821,7 +821,7 @@ FOOTER
   color: var(--white);
 }
 
-/* ========search
+/* ========
 Contact us
 ========== */
 .contact-page-body {
@@ -1093,7 +1093,7 @@ GridPics
 /*
 =============== 
 Slider
-===============500
+===============
 */
 .slider {
   position: relative;
@@ -1244,7 +1244,7 @@ Slider
     top: 3%;
   }
 }
-/* =========.a
+/* =========
 item-template
 ========== */
 .single-object {

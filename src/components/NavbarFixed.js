@@ -3,14 +3,14 @@ import Logo from "../components/Logo"
 import MenuBtn from "../components/MenuBtn"
 import Searchbar from "../components/Searchbar"
 
-const NavbarFixed = () => {
+const NavbarFixed = ({ notEmpty }) => {
   return (
     <div className="navbar-fixed">
       <div className="logo-top">
         <Logo />
       </div>
       <MenuBtn />
-      <Searchbar />
+      <Searchbar notEmpty={notEmpty} />
     </div>
   )
 }

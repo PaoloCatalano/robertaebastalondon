@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from "react"
+import { GatsbyContext } from "../context/context"
 import Sidebar from "../components/Sidebar"
 import Layout from "../components/Layout"
 import NavbarFixed from "../components/NavbarFixed"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
-import { GatsbyContext } from "../context/context"
 import { graphql } from "gatsby"
 
 const Collection = ({ data }) => {
@@ -17,7 +17,7 @@ const Collection = ({ data }) => {
   useEffect(() => {
     let tempItems = nodes
     tempItems = tempItems.filter(item => {
-      return item.keywords.includes(search)
+      return item.keywords.includes(search.toLowerCase())
     })
     if (search === "" || search.length >= 1) {
       setFiltered(null)
