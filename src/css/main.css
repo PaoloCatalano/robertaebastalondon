@@ -134,7 +134,7 @@ h4 {
   }
 }
 
-/* =========
+/* =========grid: 50px auto
 CSS components
 ============*/
 .underline {
@@ -322,7 +322,7 @@ MENU BTN
   font-size: 24px;
 }
 .MenuBtnHome {
-  top: 15px;
+  top: 18px;
   left: 15px;
 }
 @media screen and (min-width: 1001px) {
@@ -520,6 +520,13 @@ HERO
     justify-self: end;
     background-color: transparent;
   }
+  .main-home .searchsmall {
+    align-self: baseline;
+  }
+  .main-home .searchsmall .footer {
+    padding: 0.5rem 2rem 0.25rem 1rem;
+    align-items: end;
+  }
 
   .main-home .hero-title {
     justify-self: center;
@@ -690,7 +697,7 @@ HERO
   .main-home {
     grid: 100px auto 100px / 65% auto;
   }
-  .half-background {
+  .half-background {grid: 100px
     width: 65%;
   }
 } */
@@ -714,6 +721,10 @@ HERO
     height: 392.9px;
   }
 }
+.main-home .navbar,
+.main-home .searchsmall {
+  align-self: end;
+}
 
 @media screen and (min-width: 1242px) and (max-height: 660px) {
   .main-home {
@@ -722,8 +733,15 @@ HERO
   .hero-title {
     margin: -0.5rem;
   }
-  .main-home .navbar {
-    align-self: end;
+  .main-home .navbar,
+  .main-home .searchsmall {
+    align-self: center;
+  }
+  .main-home .searchbar {
+    padding: 0;
+  }
+  .main-home .searchbar .footer {
+    padding: 0 1rem;
   }
 }
 @media screen and (min-width: 1001px) and (max-height: 1241px) {
@@ -732,9 +750,6 @@ HERO
   }
   .hero-title {
     margin: -0.5rem;
-  }
-  .main-home .navbar {
-    align-self: end;
   }
 }
 @media screen and (max-width: 1331px) {
@@ -798,7 +813,6 @@ FOOTER
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 1rem 3rem;
   padding: 1rem 2rem 0.25rem 1rem;
   width: 100%;
 }
@@ -1231,8 +1245,8 @@ Slider
   top: 0;
   left: 90%;
   content: "";
-  background: url("../assets/zoom.png");
-  background-size: 24px;
+  background: url("../assets/zoom.jpg");
+  background-size: 20px;
   background-repeat: no-repeat;
 }
 
@@ -1712,7 +1726,7 @@ HISTORY
 }
 /* 
 =============
-= collection preview  =
+= collection preview  =zoom
 ============= 
 */
 .prev-collection {
@@ -1743,6 +1757,8 @@ HISTORY
   font-weight: 600;
   font-size: var(--f-medium);
   text-transform: uppercase;
+  letter-spacing: 1.4px;
+  text-align: center;
 }
 @media screen and (min-width: 1500px) {
   .links-collection {
