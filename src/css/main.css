@@ -505,7 +505,10 @@ HERO
     transform: translateX(0);
     grid: 1fr/1fr;
   }
-
+  .main-home .navbar,
+  .main-home .searchsmall {
+    align-self: end;
+  }
   .main-home .searchbar {
     position: static;
     width: auto;
@@ -721,9 +724,11 @@ HERO
     height: 392.9px;
   }
 }
-.main-home .navbar,
-.main-home .searchsmall {
-  align-self: end;
+
+@media screen and (min-width: 1001px) and (max-height: 660px) {
+  .main-home .searchsmall {
+    padding-top: 0;
+  }
 }
 
 @media screen and (min-width: 1242px) and (max-height: 660px) {
@@ -737,6 +742,7 @@ HERO
   .main-home .searchsmall {
     align-self: center;
   }
+
   .main-home .searchbar {
     padding: 0;
   }
@@ -839,7 +845,7 @@ FOOTER
 Contact us
 ========== */
 .contact-page-body {
-  /* overflow: hidden; */
+  /* overflow: hidden;hover */
 }
 
 .contact-page {
@@ -1237,7 +1243,7 @@ Slider
   top: 10px; */
 }
 
-.activeSlide:hover .zoom::before {
+/* .activeSlide:hover .zoom::before {
   z-index: 99;
   position: absolute;
   width: 10%;
@@ -1248,7 +1254,7 @@ Slider
   background: url("../assets/zoom.jpg");
   background-size: 20px;
   background-repeat: no-repeat;
-}
+} */
 
 .zoom button {
   font-size: 20px;

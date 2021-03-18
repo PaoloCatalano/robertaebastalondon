@@ -23,6 +23,7 @@ export default [
     info: (
       <ul>
         <li>Milan, Via Fiori Chiari 3</li>
+        <li style={{ color: "transparent" }}> . </li>
         <li>OPENING TIMES</li>
         <li>Monday:</li>
         <li>15:00 to 19:30</li>
@@ -38,6 +39,7 @@ export default [
     info: (
       <ul>
         <li>Milan, Via Marco Formentini 4/6</li>
+        <li style={{ color: "transparent" }}> . </li>
         <li>OPENING TIMES</li>
         <li>Tuesday to Saturday:</li>
         <li>10:00 to 19:00</li>
@@ -50,6 +52,7 @@ export default [
       <ul>
         <li>Milan, Via Solferino, in front of number 3</li>
         <li>(lower ground floor)</li>
+        <li style={{ color: "transparent" }}> . </li>
         <li>OPENING TIMES</li>
         <li>Monday:</li>
         <li>15:00 to 19:30</li>
