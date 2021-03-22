@@ -21,7 +21,7 @@ export default function Home({
   }, [])
 
   return (
-    <div style={{ overflowX: "hidden" }}>
+    <div style={{ overflowX: "hidden", overflowY: "hidden" }}>
       <SEO title="Home" />
       <div className="half-background">
         <aside className={`${isSidebarOpen ? "show-modal" : ""}`}>
@@ -61,7 +61,7 @@ export const query = graphql`
       nodes {
         indirizzo
         foto {
-          fluid(maxWidth: 5000, quality: 100) {
+          fluid(maxWidth: 4000, quality: 100) {
             ...GatsbyContentfulFluid
           }
         }

@@ -36,7 +36,7 @@ const Collection = ({ data }) => {
           <div className="underline"></div>
         </div>
       </Sidebar>
-      <Layout nofooter oneModal title="London Collection">
+      <Layout nofooter oneModal title="London Collection Search Page">
         <div className="collection">
           <div className="phantom-column-collection"></div>
           <div className="pics-container prev-collection">
