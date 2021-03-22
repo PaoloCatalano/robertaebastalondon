@@ -6,8 +6,8 @@ module.exports = {
     titleTemplate: "Robertaebasta London · %s",
     description:
       "Robertaebasta London, a 20th century art and design gallery based in Pimlico Road, London.",
-    url: "https://robertaebasta-prova.netlify.app",
-    siteUrl: "https://robertaebasta-prova.netlify.app",
+    url: "https://www.robertaebasta.co.uk",
+    siteUrl: "https://www.robertaebasta.co.uk",
     image: "/img-ret.jpg",
   },
   plugins: [
