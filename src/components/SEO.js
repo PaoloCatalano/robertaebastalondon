@@ -32,7 +32,7 @@ const SEO = ({ title, description, image, cms, article, keywords }) => {
       <meta name="keywords" content={seo.keywords} />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
-
+      <link rel="canonical" href={seo.url} />
       {seo.url && <meta property="og:url" content={seo.url} />}
 
       {(article ? true : null) && <meta property="og:type" content="article" />}

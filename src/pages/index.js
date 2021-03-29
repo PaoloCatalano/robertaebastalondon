@@ -37,7 +37,7 @@ export default function Home({
               <div className="hero-pic">
                 <SliderTimer data={nodes} />
               </div>
-              <p className="desc-side">ROBERTAEBASTA LONDON’S HIGHLIGHTS</p>
+              <p className="desc-side">ROBERTAEBASTA_LONDON’S_HIGHLIGHTS</p>
             </div>
           </div>
           <div className="no-mobile"></div>
