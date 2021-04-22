@@ -25,6 +25,7 @@ const Layout = ({
   image,
   keywords,
   cms,
+  policy,
 }) => {
   const { isSidebarOpen, setIsSidebarOpen } = useContext(GatsbyContext)
   useEffect(() => {
@@ -39,6 +40,7 @@ const Layout = ({
         image={image}
         keywords={keywords}
         cms={cms}
+        policy={policy}
       />
       <aside className={`${isSidebarOpen ? "show-modal" : ""}`}>
         <Navbar oneModal={oneModal}>

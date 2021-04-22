@@ -2,7 +2,7 @@ import React from "react"
 import { AiOutlineInstagram } from "react-icons/ai"
 import { TiSocialFacebook } from "react-icons/ti"
 import socials from "../constants/socials"
-const Footer = ({ contact, nofooter, home }) => {
+const Footer = ({ contact, nofooter }) => {
   return nofooter ? (
     <div></div>
   ) : (

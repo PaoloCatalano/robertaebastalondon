@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import Sidebar from "../components/Sidebar"
 import NavbarFixed from "../components/NavbarFixed"
-
+import { Link } from "gatsby"
 const contact = () => {
   return (
     <div className="contact-page-body">
@@ -48,6 +48,10 @@ const contact = () => {
               <div className="space" />
               <h4>OPENING TIMES:</h4>
               <p>Monday to Saturday: 10:00 to 18:00</p>
+              <div className="space" />
+              <Link to="/policy">
+                <p>Cookies and Privacy Policy</p>
+              </Link>
               <div className="space" />
               <p>To see our full collection visit:</p>
               <a

@@ -2,8 +2,9 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
+import Popup from "../components/Popup"
 
-const SEO = ({ title, description, image, cms, article, keywords }) => {
+const SEO = ({ title, description, image, cms, article, keywords, policy }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
 
@@ -24,27 +25,32 @@ const SEO = ({ title, description, image, cms, article, keywords }) => {
     keywords: keywords || defaultKeywords,
   }
   return (
-    <Helmet
-      title={seo.title}
-      titleTemplate={titleTemplate}
-      htmlAttributes={{ lang: "en" }}
-    >
-      <meta name="keywords" content={seo.keywords} />
-      <meta name="description" content={seo.description} />
-      <meta name="image" content={seo.image} />
-      <link rel="canonical" href={seo.url} />
-      {seo.url && <meta property="og:url" content={seo.url} />}
+    <>
+      {!policy && <Popup />}
+      <Helmet
+        title={seo.title}
+        titleTemplate={titleTemplate}
+        htmlAttributes={{ lang: "en" }}
+      >
+        <meta name="keywords" content={seo.keywords} />
+        <meta name="description" content={seo.description} />
+        <meta name="image" content={seo.image} />
+        <link rel="canonical" href={seo.url} />
+        {seo.url && <meta property="og:url" content={seo.url} />}
 
-      {(article ? true : null) && <meta property="og:type" content="article" />}
+        {(article ? true : null) && (
+          <meta property="og:type" content="article" />
+        )}
 
-      {seo.title && <meta property="og:title" content={seo.title} />}
+        {seo.title && <meta property="og:title" content={seo.title} />}
 
-      {seo.description && (
-        <meta property="og:description" content={seo.description} />
-      )}
+        {seo.description && (
+          <meta property="og:description" content={seo.description} />
+        )}
 
-      {seo.image && <meta property="og:image" content={seo.image} />}
-    </Helmet>
+        {seo.image && <meta property="og:image" content={seo.image} />}
+      </Helmet>
+    </>
   )
 }
 

@@ -164,7 +164,7 @@ CSS components
   font-size: var(--f-large);
 }
 .space {
-  height: 2rem;
+  height: 1.9rem;
 }
 .space-mini {
   height: 0.5rem;
@@ -841,6 +841,15 @@ Contact us
     font-size: 20px;
   }
 }
+
+.contact-page a {
+  transition: var(--transition);
+  text-decoration: none;
+}
+.contact-page a:hover {
+  text-decoration: underline;
+}
+
 /* ========
 Collection
 ========== */
@@ -1734,5 +1743,125 @@ HISTORY
   .fair-container .slider-comandi,
   .fair-container .section-center {
     width: 95%;
+  }
+}
+/* =====
+popup
+===== */
+.CookieConsent {
+  box-shadow: 0px 0px 6px var(--gray-dark);
+}
+.overlayClasses {
+  display: grid;
+  place-items: center;
+}
+.overlayClasses .privacy-page {
+  display: grid;
+  place-items: end center;
+}
+.containerClasses {
+  min-width: 300px;
+  max-width: 476px;
+  border-radius: 4px !important;
+}
+.logo-cookie {
+  padding: 16px;
+  padding-bottom: 5px;
+  background-color: var(--azure);
+  border-radius: 4px 4px 0 0;
+}
+.logo-cookie .london {
+  color: var(--gray);
+}
+.notice {
+  padding: 16px;
+  color: #3c4d51;
+}
+.notice h2 {
+  margin-bottom: 16px;
+}
+.buttonWrapperClasses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center !important;
+}
+.buttonClasses:hover {
+  background: var(--azure) !important;
+}
+/* ========
+policy page
+======== */
+.policy-page .footer-social {
+  position: fixed;
+  bottom: 0;
+}
+.policy {
+  /* width: 100vw;
+  padding: 2rem;
+  padding-right: calc(2rem + 17px); 
+  background-color: var(--azure);
+  display: grid;
+  place-content: center; */
+}
+@media screen and (max-width: 800px) {
+  .policy {
+    /* padding-right: 2rem; */
+  }
+}
+.policy-page .center {
+  margin-top: 0;
+}
+.policy .content {
+  margin: 2rem;
+  padding-bottom: 9rem;
+}
+.policy .content h1 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+.policy .content b span {
+  font-size: var(--f-medium);
+}
+.policy .CookieConsent {
+  display: block !important;
+}
+
+/* ::-webkit-scrollbar {
+    width: 17px; default
+  } */
+.policy table {
+  text-align: center;
+  width: 70vw;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.policy td {
+  border: solid 1px var(--gray);
+}
+.policy p {
+  padding: 0.5rem;
+}
+.policy a {
+  font-weight: bold;
+  color: black;
+}
+.marg1 {
+  margin-left: 3rem;
+}
+.marg2 {
+  margin-left: 1.5rem;
+}
+
+@media screen and (max-width: 1001px) {
+  .policy .content {
+    margin: 2rem 17px;
+  }
+}
+@media screen and (max-width: 431px) {
+  td p {
+    width: 45vw;
   }
 }
