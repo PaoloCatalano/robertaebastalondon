@@ -852,11 +852,12 @@ const Error = () => {
                       <span>Right to access:</span>
                     </b>
                     <span>
-                      est (i) copies of the information we hold about you at any
-                      time, or (ii) that we modify, update or delete such
-                      information. If we provide you wit access to the
-                      information we hold about you, we will not charge you for
-                      this, unless request is “manifestly unfounded or
+                      {" "}
+                      The right to request (i) copies of the information we hold
+                      about you at any time, or (ii) that we modify, update or
+                      delete such information. If we provide you wit access to
+                      the information we hold about you, we will not charge you
+                      for this, unless request is “manifestly unfounded or
                       excessive”. Where we are legally permitted to do so, we
                       may refuse your request. If we refuse your request, we
                       will tell you the reasons why.
@@ -873,7 +874,9 @@ const Error = () => {
                       <span>Right to correct:</span>
                     </b>
                     <span>
-                      your Data rectified if it is inaccurate or incomplete.
+                      {" "}
+                      The right to have your Data rectified if it is inaccurate
+                      or incomplete.
                     </span>
                   </p>
 
@@ -887,7 +890,9 @@ const Error = () => {
                       <span>Right to erase:</span>
                     </b>
                     <span>
-                      est that we delete or remove your Data from our systems.
+                      {" "}
+                      The right to request that we delete or remove your Data
+                      from our systems.
                     </span>
                   </p>
 
@@ -901,8 +906,9 @@ const Error = () => {
                       <span>Right to restrict our use of your Data:</span>
                     </b>
                     <span>
-                      ck” us form using your Data or limit the way in which we
-                      can use it.
+                      {" "}
+                      the right to “block” us form using your Data or limit the
+                      way in which we can use it.
                     </span>
                   </p>
 
@@ -915,7 +921,11 @@ const Error = () => {
                     <b>
                       <span>Right to data portability:</span>
                     </b>
-                    <span>est that we move, copy or transfer your Data.</span>
+                    <span>
+                      {" "}
+                      the right to request that we move, copy or transfer your
+                      Data.
+                    </span>
                   </p>
 
                   <p className="marg1">
@@ -929,8 +939,9 @@ const Error = () => {
                       <span>Right to object:</span>
                     </b>
                     <span>
-                      ct to our use of your Data including where we use it for
-                      our legitimate interests.
+                      {" "}
+                      the right to object to our use of your Data including
+                      where we use it for our legitimate interests.
                     </span>
                   </p>
 
