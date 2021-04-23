@@ -19,7 +19,6 @@ const Error = () => {
           <div className="center">
             <div className="policy">
               <PopupSmall />
-              {/* <Logo /> */}
               <div className="content">
                 <h1>PRIVACY POLICY</h1>
 
