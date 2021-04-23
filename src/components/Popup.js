@@ -35,8 +35,8 @@ const Popup = () => {
       ariaAcceptLabel
       overlay
       onAccept={() => {
-        Cookies.set("gatsby-gdpr-google-tagmanager", true)
         Cookies.set("gatsby-gdpr-google-analytics", true)
+        Cookies.set("gatsby-gdpr-google-tagmanager", true)
         initializeAndTrack(location)
       }}
       location="bottom"

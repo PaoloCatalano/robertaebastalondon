@@ -12,7 +12,7 @@ const Error = () => {
     >
       <NavbarFixed />
       <Sidebar empty></Sidebar>
-      <Layout oneModal title="404" policy>
+      <Layout oneModal title="privacy policy" policy>
         <div className="contact-page">
           <div className="phantom-navbar"></div>
           <div className="phantom-column-collection"></div>
@@ -907,7 +907,7 @@ const Error = () => {
                     </b>
                     <span>
                       {" "}
-                      the right to “block” us form using your Data or limit the
+                      The right to “block” us form using your Data or limit the
                       way in which we can use it.
                     </span>
                   </p>
@@ -923,7 +923,7 @@ const Error = () => {
                     </b>
                     <span>
                       {" "}
-                      the right to request that we move, copy or transfer your
+                      The right to request that we move, copy or transfer your
                       Data.
                     </span>
                   </p>
@@ -940,7 +940,7 @@ const Error = () => {
                     </b>
                     <span>
                       {" "}
-                      the right to object to our use of your Data including
+                      The right to object to our use of your Data including
                       where we use it for our legitimate interests.
                     </span>
                   </p>

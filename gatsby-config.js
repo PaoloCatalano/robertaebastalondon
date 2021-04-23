@@ -36,7 +36,7 @@ module.exports = {
           trackingId: "G-DYKJ8F0J0D", // leave empty if you want to disable the tracker
           cookieName: "gatsby-gdpr-google-analytics", // default
           anonymize: true, // default
-          allowAdFeatures: false, // default
+          allowAdFeatures: true, // default
         },
         googleTagManager: {
           trackingId: "G-DYKJ8F0J0D", // leave empty if you want to disable the tracker
