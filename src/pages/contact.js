@@ -47,7 +47,8 @@ const contact = () => {
               </a>
               <div className="space" />
               <h4>OPENING TIMES:</h4>
-              <p>Monday to Saturday: 10:00 to 18:00</p>
+              <p>Monday to Friday: 10:00 to 18:00</p>
+              <p>Saturday: 11:00 to 15:00</p>
               <div className="space" />
               <Link to="/policy">
                 <p>Cookies and Privacy Policy</p>
