@@ -48,6 +48,7 @@ const contact = () => {
               <div className="space" />
               <h4>OPENING TIMES:</h4>
               <p>Monday to Friday: 10:00 to 18:00</p>
+              <div className="space-mini" />
               <p>Saturday: 11:00 to 15:00</p>
               <div className="space" />
               <Link to="/policy">
