@@ -217,6 +217,8 @@ LOGO
   z-index: 90;
   top: 1rem;
   left: 34px;
+  /*CHECK!!!!!!!*/
+  z-index: 89;
 }
 
 /* ========
@@ -347,9 +349,8 @@ aside {
 .modal-container {
   display: flex;
   flex-direction: row;
-
   width: 100vw;
-  height: 100vh;
+  height: 103vh;
   transition: var(--transition);
 }
 
@@ -1146,7 +1147,9 @@ Slider
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 97%;
+  /* top: 97%; */
+  bottom: 0;
+
   z-index: 65;
   width: 100%;
 }
@@ -1178,7 +1181,8 @@ item-template
   position: absolute;
   z-index: 101;
   padding: 1rem;
-  left: 92vw;
+  /* left: 92vw; */
+  right: 0;
 }
 .item-info-wide {
   display: flex;
@@ -1289,7 +1293,8 @@ item-template
     object-fit: contain !important;
   }
   .dots-container {
-    top: 98%;
+    /* top: 98%; */
+    bottom: 0;
   }
   .item-info-wide {
     display: none;
@@ -1389,15 +1394,15 @@ item-template
       opacity: 0;
     }
   }
-  .close-item {
+  /* .close-item {
     left: 85vw;
-  }
+  } */
 }
-@media screen and (min-width: 1500px) {
+/* @media screen and (min-width: 1500px) {
   .close-item {
     left: 95vw;
   }
-}
+} */
 /*
  =========
 HISTORY
@@ -1501,6 +1506,10 @@ HISTORY
   .section1 article,
   .section2 article {
     padding: 1rem 3rem;
+    letter-spacing: 1px;
+  }
+  .section2 .article-container {
+    padding: 1rem 0.05rem;
     letter-spacing: 1px;
   }
 
@@ -1683,19 +1692,27 @@ HISTORY
 
 /* 
 =============
-= each fair =
+= each fair & each article =
 ============= 
 */
 .fair-container img {
   object-fit: contain !important;
 }
 .fair-container .dots-container {
-  top: 90%;
+  /* top: 90%; */
+  bottom: 0;
 }
 .fair-container .slide,
 .fair-container .slider-comandi,
 .fair-container .section-center {
   height: 36vw;
+  /* height: 100vh; */
+  width: 700px;
+}
+.article-container .slide,
+.article-container .slider-comandi,
+.article-container .section-center {
+  height: 88vh;
   width: 700px;
 }
 .fair-container p {
@@ -1706,6 +1723,7 @@ HISTORY
 @media screen and (min-width: 1500px) {
   .fair-container .dots-container {
     top: 94%;
+    /* bottom: 0; */
   }
   .fair-container .slide,
   .fair-container .slider-comandi,
@@ -1722,6 +1740,12 @@ HISTORY
   .fair-container .section-center {
     height: 53vw;
   }
+  .article-container .slide,
+  .article-container .slider-comandi,
+  .article-container .section-center {
+    /* height: 53vw; */
+    height: 100vw;
+  }
 }
 @media screen and (min-width: 850px) {
   .fair-container .slide {
@@ -1731,6 +1755,11 @@ HISTORY
 @media screen and (max-width: 850px) {
   .fair-container .dots-container {
     top: 90%;
+    /* bottom: 0; */
+  }
+  .article-container .dots-container {
+    top: inherit;
+    bottom: 0;
   }
   .fair-container article {
     padding: 1.5rem 0;
@@ -1852,3 +1881,37 @@ policy page
     width: 45vw;
   }
 }
+
+.logo-modal {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 99;
+}
+
+.appear {
+  transition: var(--transition);
+  animation: appear 2s ease-in-out 2.5s forwards;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* PRESS */
+.frame-press {
+  border: 2px solid #000;
+}
+.press-title {
+  text-transform: uppercase;
+  color: #000;
+}
+.press-date {
+  padding-top: 0.3rem !important;
+  color: #000;
+}
+/* 1920x1080 */

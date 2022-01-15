@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import { MdClose } from "react-icons/md"
 import { IoIosArrowBack } from "react-icons/io"
 import { IoIosArrowForward } from "react-icons/io"
+import Logo from "../components/Logo"
 
 const NavbarModal = ({ children, oneModal }) => {
   const { links, hideSidebar } = useContext(GatsbyContext)
@@ -19,6 +20,9 @@ const NavbarModal = ({ children, oneModal }) => {
 
   return (
     <div className="modal-container">
+      <div className={isSwitched ? "logo-modal" : "logo-modal appear"}>
+        <Logo />
+      </div>
       <button className="modal-close" onClick={hideSidebar}>
         <MdClose className="icon" />
       </button>

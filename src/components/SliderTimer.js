@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect } from "react"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
 
-const Slider = ({ data, alt }) => {
-  const [photos, setPhotos] = useState(data)
+const Slider = ({ data: photos, alt }) => {
   const [index, setIndex] = React.useState(0)
 
   useEffect(() => {

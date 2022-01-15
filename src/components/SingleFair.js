@@ -9,6 +9,7 @@ const SingleFair = ({
 }) => {
   const fiera = nodes[0].fiera
 
+  // eslint-disable-next-line
   const [photos, setPhotos] = useState(nodes)
   const [index, setIndex] = React.useState(0)
 

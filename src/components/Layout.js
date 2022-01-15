@@ -30,6 +30,7 @@ const Layout = ({
   const { isSidebarOpen, setIsSidebarOpen } = useContext(GatsbyContext)
   useEffect(() => {
     setIsSidebarOpen(false)
+    // eslint-disable-next-line
   }, [])
 
   return (

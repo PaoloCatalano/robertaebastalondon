@@ -25,6 +25,7 @@ const Collection = ({ data }) => {
     if (search.length >= 2) {
       setFiltered(tempItems)
     }
+    // eslint-disable-next-line
   }, [search])
 
   return (

@@ -1,9 +1,11 @@
-import React, { useState } from "react"
+import React from "react"
 import Img from "gatsby-image"
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io"
 
-const Slider = ({ data, alt }) => {
-  const [photos, setPhotos] = useState(data)
+const Slider = ({ data: photos, alt }) => {
+  // eslint-disable-next-line
+  // const [photos, setPhotos] = useState(data)
+  // const photos = data
   const [index, setIndex] = React.useState(0)
 
   const nextSlide = () => {

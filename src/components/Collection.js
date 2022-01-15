@@ -26,6 +26,7 @@ const Collection = ({ data, pagination, title, description, keywords }) => {
     if (changeCollection) {
       setprodotto(nodes)
     }
+    // eslint-disable-next-line
   }, [changeCollection])
 
   useEffect(() => {

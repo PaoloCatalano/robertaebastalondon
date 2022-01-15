@@ -22,7 +22,7 @@ const Categories = ({
       }
     }
   `)
-  //uniche categorie
+  //unique categorie
   const tempCategorie = nodes.map(item => {
     return item.categoria.toLocaleLowerCase()
   })

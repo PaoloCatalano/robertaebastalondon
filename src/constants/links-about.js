@@ -26,6 +26,11 @@ export default [
   },
   {
     id: 6,
+    url: "press",
+    label: "press",
+  },
+  {
+    id: 7,
     url: "news",
     label: "news",
   },
