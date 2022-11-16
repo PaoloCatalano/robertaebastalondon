@@ -17,7 +17,7 @@ const Collection = ({ data }) => {
   useEffect(() => {
     let tempItems = nodes
     tempItems = tempItems.filter(item => {
-      return item.keywords.toLowerCase().includes(search.toLowerCase())
+      return item.keywords?.toLowerCase().includes(search.toLowerCase())
     })
     if (search === "" || search.length >= 1) {
       setFiltered(null)
