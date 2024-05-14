@@ -42,13 +42,13 @@ const ItemTemplates = ({ data }) => {
 
   return (
     <div className="single-object">
-      <SEO
+      {/* <SEO
         title={designer + " · " + titolo}
         description={descrizione}
         image={fluid.src}
         cms
         keywords={keywords}
-      />
+      /> */}
       <button className="submit close-item" onClick={handleBack}>
         <HiOutlineXCircle />
       </button>
