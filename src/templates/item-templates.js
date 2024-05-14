@@ -24,8 +24,6 @@ const ItemTemplates = ({ data }) => {
     keywords,
   } = nodes[0]
 
-  console.log("fluid: ", fluid?.src)
-
   const alt = `${designer + ", " + titolo + ", " + keywords}`
 
   //-----------------------------------------------------------------
