@@ -6,9 +6,9 @@ export default [
     info: (
       <ul>
         <li>CONTACT DETAILS:</li>
-        <li>Info@robertaebasta.com</li>
-        <li>T: +39 02 861593</li>
-        <li>Milan, Via Fiori Chiari 2</li>
+        <li>Info@mail.com</li>
+        <li>T: +1234567890</li>
+        <li>Milan, Via Milano 2</li>
         <li style={{ color: "transparent" }}> . </li>
         <li>OPENING TIMES</li>
         <li>Monday to Friday:</li>
@@ -22,7 +22,7 @@ export default [
     title: "ART DECO & DESIGN",
     info: (
       <ul>
-        <li>Milan, Via Fiori Chiari 3</li>
+        <li>Milan, Via Milano 3</li>
         <li style={{ color: "transparent" }}> . </li>
         <li>OPENING TIMES</li>
         <li>Monday:</li>
@@ -38,7 +38,7 @@ export default [
     title: "DESIGN GALLERY:",
     info: (
       <ul>
-        <li>Milan, Via Marco Formentini 4/6</li>
+        <li>Milan, Via Milano 4</li>
         <li style={{ color: "transparent" }}> . </li>
         <li>OPENING TIMES</li>
         <li>Tuesday to Saturday:</li>
@@ -50,7 +50,7 @@ export default [
     title: "DESIGN GALLERY 2",
     info: (
       <ul>
-        <li>Milan, Via Solferino, in front of number 3</li>
+        <li>Milan, Via Milano 1</li>
         <li>(lower ground floor)</li>
         <li style={{ color: "transparent" }}> . </li>
         <li>OPENING TIMES</li>

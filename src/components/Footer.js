@@ -9,9 +9,9 @@ const Footer = ({ contact, nofooter }) => {
     <div className="footer">
       {contact && (
         <div className="footer-contact">
-          <a href={`mailto:${socials.email}`}>london@robertaebasta.com</a>
+          <a href={`mailto:${socials.email}`}>mail@mail.com</a>
           <div className="underline" style={{ margin: 0 }}></div>
-          <a href="tel:+447554544125">+44 (0) 7554 544125</a>
+          <a href="tel:+1234567890">+1234567890</a>
         </div>
       )}
       <div className="footer-social">

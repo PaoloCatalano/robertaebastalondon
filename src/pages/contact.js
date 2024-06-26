@@ -18,32 +18,29 @@ const contact = () => {
               <div className="underline" />
               <div className="space" />
               <h4>E-MAIL:</h4>
-              <a
-                className="no-underline"
-                href="mailto:london@robertaebasta.com"
-              >
-                london@robertaebasta.com
+              <a className="no-underline" href="mailto:mail@mail.com">
+                mail@mail.com
               </a>
               <div className="space" />
               <h4>PHONE NUMBERS:</h4>
               <p>
-                <a href="tel:+447554544125">+44 ( 0 ) 7554 544125</a>
+                <a href="tel:+1234567890">+1234567890</a>
               </p>
               <div className="space-mini" />
               <p>
-                <a href="tel:+442077301263"> +44 ( 0 ) 20 7730 1263</a>
+                <a href="tel:+0987654321"> +0987654321</a>
               </p>
               <div className="space" />
               <h4>GALLERY:</h4>
               <a
-                href="https://www.google.com/maps/place/Robertaebasta%C2%AE+Art+Gallery/@51.4901621,-0.1540795,15z/data=!4m5!3m4!1s0x0:0x9c67552f85d66517!8m2!3d51.4901649!4d-0.1540814"
+                href="https://www.google.com/maps/d/viewer?ie=UTF8&hl=en&msa=0&ll=51.528868434293244%2C-0.10159864999999435&spn=0.009884%2C0.012295&z=7&mid=1F9N6ZW6Al55VBo25BlbXO3i_wUY"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <p>85 Pimlico Road, Belgravia</p>
+                <p>00 London Road, London</p>
                 <div className="space-mini" />
 
-                <p>London, SW1W 8PH</p>
+                <p>London, AB1C 8DF</p>
               </a>
               <div className="space" />
               <h4>OPENING TIMES:</h4>

@@ -6,8 +6,8 @@ module.exports = {
     titleTemplate: "Robertaebasta London · %s",
     description:
       "Robertaebasta London, a 20th century art and design gallery based in Pimlico Road, London.",
-    url: "https://www.robertaebasta.co.uk",
-    siteUrl: "https://www.robertaebasta.co.uk",
+    url: "https://robertaebasta.netlify.app",
+    siteUrl: "https://robertaebasta.netlify.app",
     image: "/img-ret.jpg",
   },
   plugins: [
@@ -33,7 +33,7 @@ module.exports = {
       resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
         googleAnalytics: {
-          trackingId: "G-DYKJ8F0J0D", // leave empty if you want to disable the tracker
+          trackingId: "", // leave empty if you want to disable the tracker
           cookieName: "gatsby-gdpr-google-analytics", // default
           anonymize: true, // default
           allowAdFeatures: false, // default
@@ -44,7 +44,7 @@ module.exports = {
           dataLayerName: "dataLayer", // default
         },
         facebookPixel: {
-          pixelId: "YOUR_FACEBOOK_PIXEL_ID", // leave empty if you want to disable the tracker
+          pixelId: "", // leave empty if you want to disable the tracker
           cookieName: "gatsby-gdpr-facebook-pixel", // default
         },
         // defines the environments where the tracking should be available  - default is ["production"]

@@ -238,8 +238,8 @@ const Error = () => {
                             <span>
                               The website that you are currently using,{" "}
                               <span>
-                                <a href="https://www.robertaebasta.co.uk/">
-                                  robertaebasta.co.uk
+                                <a href="https://robertaebasta.netlify.app">
+                                  robertaebasta.netlify.app
                                 </a>
                               </span>
                               , and any sub-domains of this site unless

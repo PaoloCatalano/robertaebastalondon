@@ -1,5 +1,5 @@
 export default {
-  facebook: "https://m.facebook.com/RobertaebastaMilano/",
-  insta: "https://www.instagram.com/robertaebasta_london/",
-  email: "london@robertaebasta.com",
+  facebook: "https://m.facebook.com/",
+  insta: "https://www.instagram.com/",
+  email: "mail@mail.com",
 }
